@@ -1,0 +1,14 @@
+Progamação atravez de uma biblioteca que eu vou criar, para limitar os recursos a serem acessados e aumentar a segurança.
+import from CDAChatLib user.theme <--exemplo de comando para obter o tema do usuario
+
+
+Sauron --> olho que olha na direção do mouse (já fiz);
+Rain Cloud --> nuvem chuvosa que segue o mouse (chuva em cima do mouse) até o limite de sua imagem;
+Foguete --> foguete que acelera aumentando o "fogo" atras de sí ao passar o mouse por cima do contato (do proprio usuario que usa essa imagem);
+Atomo --> Particulas girando
+Day/Night --> muda aparencia de sol para lua ao detectar as horas, variando dependendo da hora do dia;
+Camera Fotografica --> a cada clique do usuario, animação de bater foto;
+Planeta terra --> rotação do planeta
+lampada --> acende/apaga de acordo com o seu tema;
+Caixa de Correio --> começa a lotar de acordo com as mensagens não lidas (do proprio usuario que usa essa imagem);
+Sino --> bate toda vez que uma mensagem nova chega (do proprio usuario que usa essa imagem)

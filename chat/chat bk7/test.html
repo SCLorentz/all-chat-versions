@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="g_id_signin" data-client_id="YOUR_CLIENT_ID"></div>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+        function handleCredentialResponse(response) {
+            // Use the response to create a session for the user in your app
+            console.log("ID: " + response.credential);
+        }
+        window.onload = function() {
+            google.accounts.id.initialize({
+                client_id: "YOUR_CLIENT_ID",
+                callback: handleCredentialResponse
+            });
+            google.accounts.id.renderButton(
+                document.getElementById("buttonDiv"),
+                { theme: "outline", size: "large" }  // customization attributes
+            );
+            google.accounts.id.prompt(); // also display the One Tap sign-in prompt
+        }
+    </script>
+</body>
+</html>

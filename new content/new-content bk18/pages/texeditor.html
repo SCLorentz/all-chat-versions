@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>editor de texto</title>
+    <style>
+        body {
+            background: black;
+        }
+        pre {
+            color:white;
+        }
+        h3 {
+            color: white;
+        }
+        a {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <img src="img/folder.svg" style="height:40px;cursor:pointer;" title="selecionar arquivo" onclick="document.getElementById(`file-input`).click()">
+    <input type="file" id="file-input" style="display:none;">
+    <a id="creatednwlink" onclick="downloadfile()">create a download link</a>
+    <a id="download" onclick="download()" download="">download file</a>
+    <h3 id="title-object">teste</h3>
+    <a id="size">ew</a>
+    <a id="last-mod">aw</a>
+    <pre id="file-content" contenteditable="true" spellcheck="false"></pre>
+    <script>
+        function readSingleFile(e) {
+            var file = e.target.files[0];
+            document.getElementById('title-object').innerHTML = file.name;
+            document.getElementById('size').innerText = file.size + 'bytes';
+            document.getElementById('last-mod').innerText = file.lastModified;
+            if (!file) {
+            return;
+            }
+            var reader = new FileReader();
+            reader.onload = function(e) {
+            var contents = e.target.result;
+            displayContents(contents);
+            };
+            reader.readAsText(file);
+        }
+        function displayContents(contents) {
+            var element = document.getElementById('file-content');
+            element.textContent = contents;
+        }
+        document.getElementById('file-input').addEventListener('change', readSingleFile, false);
+        function downloadfile() {
+            var content = document.getElementById('file-input').innerText;
+            var size = document.getElementById('size').innerText;
+            const blob = new Blob([content], { type: "text/plain" });
+            // Criar um URL temporário para o Blob
+            const url = URL.createObjectURL(blob);
+            document.getElementById("download").href = url;
+            document.getElementById("download").download = document.getElementById('title-object').innerText
+        }
+    </script>
+</body>
+</html>

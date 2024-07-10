@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.content-left {
+            clear:none;
+            background-color: #1a1a1a;
+            padding: 15px;
+            width: 65%;
+            min-width: 50%;
+            height: 400px;
+            border-radius: 0.5rem;
+            margin-right:2%;
+            resize: horizontal;
+            overflow: auto;
+            box-shadow: inset 4px 4px 6px 4px #0000003d;
+            color: white;
+        }
+        div.content-right {
+            clear:none;
+            width: 50%;
+            min-width: 30%;
+            color: white;
+            height: fit-content;
+        }
+        div.user-info {
+            width:100%;
+            display: flex;
+            align-items: flex-start;
+            justify-content: flex-end;
+            border-bottom: 2px solid white;
+            padding-bottom: 5%;
+        }
+        div.user-content {
+            margin-top: 5%;
+            background: lightgray;
+            color: black;
+            height: calc(60% - 150px);
+            border-radius: 0.5rem;
+            padding: 3%;
+        }
+        div.active-bar {
+            margin-top: 5%;
+            padding: 1%;
+            background: #919191;
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            height: fit-content;
+        }
+        div.active-bar > span {
+            padding: 3px;
+            border: 2px solid;
+            border-radius: 50%;
+            margin: 3px;
+            font-size: 25px;
+        }
+        span.material-symbols-outlined:hover {
+            color: #ff3434;
+        }
+        div.active-bar > span:hover {
+            color: #f8e23e !important;
+        }
+
+
+        /*scrollbar*/
+        ::-webkit-scrollbar {
+        width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+        background: rgba(255, 0, 0, 0)
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+        background:rgba(83, 83, 83, 0.726) ;
+        border-top-right-radius: 0.5rem;
+        transition: all 1s ease;
+        }
+
+        ::-webkit-scrollbar-button {
+        background: rgba(220, 220, 220, 0);
+        height: 10px;
+        transition: all 1s ease;
+        display: none;
+        }
+
+        /*redimensionar*/
+        ::-webkit-scrollbar-corner {
+            background-color: rgba(255, 0, 0, 0);
+        }
+
+        /*media*/
+
+        @media only screen and (max-width: 693px) {
+            .page1 {
+                align-items: center !important;
+            }
+            div.user-info {
+                display: flex;
+                align-items: center;
+                flex-direction: column-reverse;
+            }
+
+            div#username {
+                display: flex !important;
+                flex-direction: column-reverse !important;
+                align-items: center !important;
+            }
+
+            div.user-info > img {
+                width: 105 !important;
+            }
+        
+        
+            body > div {
+                display: flex;
+                flex-direction: column-reverse;
+                justify-content: flex-end;
+            }
+            body > div > div.content-right {
+                width: 85%;
+                height: 90%;
+            }
+            body {
+                height: 98% !important;
+            }
+
+            body > div > div.content-left {
+                width: 85% !important;
+                margin-top: 5%;
+                box-shadow: none;
+                height: 100%;
+            }
+            body > div > div.content-left > p {
+                height: auto !important;
+            }
+            div.user-content {
+                height: 150px;
+            }
+        }
+
+        div.content-left-2 {
+            background: DIMGRAY;
+            margin-top: 5px;
+            padding: 5px;
+            border-radius: 0.5rem;
+            color: white;
+            height: fit-content;
+        }
+
+
+    </style>
+</head>
+<body style="height:85%;">
+    <div class="page1" style="height:fit-content;width:100%;display: flex;justify-content: space-between;align-items: flex-start;">
+        <div title="backup" class="content-left">
+            <h2>pagina [n]:
+                <span class="material-symbols-outlined" style="float: left;font-size: 30px;">
+                    delete
+                </span>
+            </h2>
+            <p style="height: 100%;">
+                <br style="font-size:large;">00/00/00<br> -> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce eros mauris, tempus laoreet diam luctus, consectetur semper felis. Pellentesque vitae diam ac sapien posuere posuere vel id libero. Vestibulum neque enim, volutpat at quam vitae, accumsan egestas ligula. Phasellus maximus nec eros et rutrum. Nullam at interdum nisi. Nunc sit amet mi non ipsum eleifend ultrices vel non enim. Ut tristique lobortis est, sed laoreet massa malesuada nec. Nullam eget eros consectetur mi fermentum semper. Praesent fermentum turpis ac viverra malesuada. Suspendisse sit amet quam efficitur orci posuere imperdiet non cursus nibh.</p>
+        </div>
+        <div class="content-right">
+            <div class="user-painel">
+                <div style="backdrop-filter: blur(1px);background-color: #565656c9;padding: 10px;border-radius: 0.2rem;">
+                    <div class="user-info">
+                        <div id="username" style="width: 210px;display: flex;flex-direction: column-reverse;align-items: flex-end;">
+                            <h5 style="display: flex;align-items: center;">[email] <span class="material-symbols-outlined" style="font-size: initial;">person</span></h5>
+                            <h2 style="margin-bottom: -10px;">[User Name]</h2>
+                        </div>
+                        <img title="user image" src="https://pbs.twimg.com/profile_images/1427908473/PYAH_logo_400x400.jpg" style="margin: 2%;margin-bottom: 0% !important;width:100px;-webkit-user-drag: none;user-select: none;">
+                    </div>
+                    <div class="active-bar" style="-webkit-user-select: none;">
+                        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0" />
+                        <span class="material-symbols-outlined">
+                            bookmark
+                        </span>
+                        <span class="material-symbols-outlined">
+                            download
+                        </span>
+                    </div>
+                    <div class="user-content" style="display: none;">
+                        <div class="text-image"> </div>
+                    </div>
+                </div>
+                <div style="background: #363636;margin-top: 10px;padding: 10px;border-radius: 0.5rem;">
+                    <h1 id="date" style="text-align: center;font-weight: 100;"></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="content-left-2" style="display: none;">
+        hello
+    </div>
+    <script>
+        setInterval(myFunction, 1000);
+        function myFunction() {
+            const d = new Date();
+            document.getElementById("date").innerHTML =d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<div class="active-bar">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0" />
+    <span class="material-symbols-outlined">
+        bookmark
+    </span>
+    <span class="material-symbols-outlined">
+        download
+    </span>
+</div>
+
+
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+js -> history.back()
+
+[
+var dante = window.open("https://homedante.colegiodante.com.br");
+dante.document.getElementById("botão").style.background = "blue";
+teoricamente funciona, porem muitos navegadores e web pages não permitem essa manipulação do js
+]
+
+edit group config: <a style="margin: 0 0 0 auto;"><span style="position: fixed;right: 3%;" class="material-symbols-outlined">more_vert</span></a>
+
+troll msgs:
+    //<div style="position:fixed;height:100%;width:100%;top: 0px;left: 0px;background: black;color: #30db30;display: flex;justify-content: center;align-items: center;">hacked</div>
+    //<a onmousemove="rickA.play()">texto</a>

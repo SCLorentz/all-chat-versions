@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call</title>
+    <!--ico-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        #video {
+            border-radius: 0.5rem;
+            box-shadow: 4px 4px 60px #00000063;
+        }
+        #video:after {
+            position: absolute;
+            content: '';
+            display: block;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+
+            background: linear-gradient(to left,rgba(255, 255, 255, 0.4) 0%, rgba(255, 0, 0, 0.4) 100%);
+            mix-blend-mode: multiply
+        }
+        #webcam {
+            margin: 5px 0;
+            background: white;
+            border-radius: 0.5rem;
+            padding: 5px;
+            box-shadow: 4px 4px 60px #00000063;
+            cursor: pointer;
+            user-select: none;
+        }
+        #monochrome {
+            user-select: none;
+            cursor: pointer;
+        }
+        #my-video {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    </style>
+</head>
+<body translate="no">
+    <h1>call</h1>
+    <div id="my-video">
+        <div>
+            <video id="video" width="640" height="480" autoplay></video>
+        </div>
+        <span id="webcam" class="material-symbols-outlined">videocam_off</span>
+        <span id="monochrome" class="material-symbols-outlined">monochrome_photos</span>
+    </div>
+    <script>
+        //
+        const video = document.getElementById('video');
+        navigator.mediaDevices.getUserMedia({ video: true })
+        .then(stream => {
+            video.srcObject = stream;
+        })
+        .catch(error => {
+            console.error('Error accessing the camera: ', error);
+            alert('Error accessing the camera');
+        });
+        //
+        const videocam = document.getElementById('webcam');
+        const monochrome = document.getElementById('monochrome');
+        monochrome.onclick = function() {
+            if(monochrome.innerText === 'monochrome_photos') {
+                video.style.filter = "grayscale(1) blur(1px) brightness(120%) sepia(65%) saturate(150%)";
+                monochrome.innerText = "photo_camera";
+                video.playbackRate = 0.2;
+            } else {
+                video.style.filter = "none";
+                monochrome.innerText = "monochrome_photos";
+                video.playbackRate = 1;
+            }
+        }
+        videocam.onclick = function() {
+            if (videocam.innerText === "videocam_off") {
+                video.style.filter = "invert(0.5)";
+                video.pause();
+                videocam.innerText = "videocam";
+            } else {
+                if (video.srcObject) {
+                    video.style.filter = "none";
+                    video.play(); // Iniciar novamente a transmissão de vídeo
+                } else {
+                    navigator.mediaDevices.getUserMedia({ video: true })
+                    .then(stream => {
+                        video.srcObject = stream; // Definir o srcObject pela primeira vez
+                    })
+                    .catch(error => {
+                        console.error('Error accessing the camera: ', error);
+                    });
+                }
+                    videocam.innerText = "videocam_off";
+                }
+        }
+    </script>
+</body>
+</html>

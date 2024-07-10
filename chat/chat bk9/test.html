@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="g_id_signin" data-client_id="YOUR_CLIENT_ID"></div>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script>
+        var express = require('express');
+        var passport = require('passport');
+        var GoogleStrategy = require('passport-google-oidc');
+        var db = require('../db');
+        router.get('/login/federated/google', passport.authenticate('google'));
+    </script>
+</body>
+</html>

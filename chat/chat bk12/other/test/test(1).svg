@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="100%" viewBox="0 0 900 899.99999" preserveAspectRatio="xMidYMid meet" version="1.0" style="background: #202d39;">
+    <defs>
+      <clipPath id="43f4f52b0a">
+        <path
+          d="M 450 236.28125 C 331.96875 236.28125 236.28125 331.96875 236.28125 450 C 236.28125 568.03125 331.96875 663.71875 450 663.71875 C 568.03125 663.71875 663.71875 568.03125 663.71875 450 C 663.71875 331.96875 568.03125 236.28125 450 236.28125 Z M 450 236.28125 "
+          clip-rule="nonzero" />
+      </clipPath>
+      <clipPath id="eee00f0bb8">
+        <path d="M 867.71875 450 L 565.871094 629.605469 L 565.871094 270.394531 Z M 867.71875 450 "
+          clip-rule="nonzero" />
+      </clipPath>
+      <clipPath id="04ba288226">
+        <path d="M 32.105469 449.992188 L 333.953125 270.386719 L 333.953125 629.597656 Z M 32.105469 449.992188 "
+          clip-rule="nonzero" />
+      </clipPath>
+    </defs>
+    <g clip-path="url(#2a93699645)" id="olho">
+      <g clip-path="url(#43f4f52b0a)">
+        <path fill="#ffde59"
+          d="M 236.28125 236.28125 L 663.71875 236.28125 L 663.71875 663.71875 L 236.28125 663.71875 Z M 236.28125 236.28125 "
+          fill-opacity="1" fill-rule="nonzero" />
+      </g>
+    </g>
+    <g clip-path="url(#b1c47a1a9c)">
+      <g clip-path="url(#eee00f0bb8)">
+        <path fill="#ffde59"
+          d="M 867.71875 270.394531 L 867.71875 629.605469 L 565.871094 629.605469 L 565.871094 270.394531 Z M 867.71875 270.394531 "
+          fill-opacity="1" fill-rule="nonzero" />
+      </g>
+    </g>
+    <g clip-path="url(#6dbb0349c6)">
+      <g clip-path="url(#04ba288226)">
+        <path fill="#ffde59"
+          d="M 32.105469 629.597656 L 32.105469 270.386719 L 333.953125 270.386719 L 333.953125 629.597656 Z M 32.105469 629.597656 "
+          fill-opacity="1" fill-rule="nonzero" />
+      </g>
+    </g> 
+    <circle id="iris-circle" fill="#121a22" cx="450" cy="450" r="130" fill-opacity="1" fill-rule="nonzero" />
+  <script type="text/ecmascript">
+    <![CDATA[
+        // Adiciona um listener para o movimento do mouse
+        document.addEventListener('mousemove', function (e) {
+        // Obtém a posição do mouse
+        var mouseX = e.clientX;
+        var mouseY = e.clientY;
+
+        // Obtém a posição do olho (centro da íris)
+        var eyeX = 450;
+        var eyeY = 450;
+
+        // Calcula a diferença entre a posição do mouse e a posição do olho
+        var deltaX = mouseX - eyeX;
+        var deltaY = mouseY - eyeY;
+
+        // Calcula o ângulo usando a tangente inversa
+        var angle = Math.atan2(deltaY, deltaX);
+
+        // Calcula a nova posição da íris
+        var irisRadius = 60;
+        var newIrisX = eyeX + Math.cos(angle) * irisRadius;
+        var newIrisY = eyeY + Math.sin(angle) * irisRadius;
+
+        // Atualiza a posição da íris
+        document.getElementById('iris-circle').setAttribute('cx', newIrisX);
+        document.getElementById('iris-circle').setAttribute('cy', newIrisY);
+        });
+    ]]>
+  </script>
+</svg>

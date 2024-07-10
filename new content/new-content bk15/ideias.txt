@@ -1,0 +1,78 @@
+<div class="active-bar">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,0" />
+    <span class="material-symbols-outlined">
+        bookmark
+    </span>
+    <span class="material-symbols-outlined">
+        download
+    </span>
+</div>
+
+
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+
+js -> history.back()
+
+[
+var dante = window.open("https://homedante.colegiodante.com.br");
+dante.document.getElementById("botão").style.background = "blue";
+teoricamente funciona, porem muitos navegadores e web pages não permitem essa manipulação do js
+]
+
+edit group config: <a style="margin: 0 0 0 auto;"><span style="position: fixed;right: 3%;" class="material-symbols-outlined">more_vert</span></a>
+
+troll msgs:
+    //<div style="position:fixed;height:100%;width:100%;top: 0px;left: 0px;background: black;color: #30db30;display: flex;justify-content: center;align-items: center;">hacked</div>
+    //<a onmousemove="rickA.play()">texto</a>
+
+marcações --> adicionar marcações a ususarios ao lado de seus nomes (todas do google):
+    eletric bolt -->
+    neurology --> fique no top 10 da classificação de estudante do ano de sua serie
+    military_tech --> fique em top 3 da classificação de estudante do ano de sua serie
+    stadia controller -->
+    public --. participe de um evento fora do Brasil, representando o dante
+    bug report --> reporte 5 bugs
+    lightbulb --> ajude a 'tripulação' com suas ideias
+    social leaderboard --> ganhe em pelo menos uma modalidade do interclasse
+    new releases --> usuario novo (valido sómente no primeiro ano na escola)
+    local cafe --> obtenha a mensagem especial "hora de dormir" ao menos 10x
+    sleep --> passe 2 meses sem obter a mensagem "hora de dormir"
+    shield moon --> passe um semestre sem obter a mensagem "hora de dormir", e tenha a marcação "sleep"
+    code -->
+    recycling --> ajude na coleta seletiva da escola
+    cake --> feliz aniversario! (somente para aniversariantes)
+    alternate email --> tenha uma conta com um email diferente do da escola (improvavel)
+    award star --> consiga pelo menos 5 marcações
+    explosion --> consiga pelo menos 15 marcações
+    brightness empty -->
+    energy program saving
+    logo dev --> se torne um dev
+    tag -->
+    science --> entre para o cientista aprendiz
+    school -->
+    (shields):
+    shield --> se torne o representante de sua classe (disponivel sómente enquanto for representante)
+    shield with heart -->
+    local police --> reporte 5 ususarios (comprovadamente)
+    verified user -->
+
+
+ester eggs:
+    Rick Astley --> chat: "page://rickA.play()"
+
+
+get time --> (função) hora de dormir / mensagens / ultimo acesso
+get brownser --> configurações de script / armazenamento de dados
+get time (data server) --> local time X data time configurações: verificar se os horarios estão de acordo
+get web camera --> call / fotos / videos
+get web microfone --> audio
+get windows theme --> sujestão de tema automatica
+get internet connection --> offline / online configurações: gerenciar conteudos exibidos
+inner cookies --> salvar informações do usuario
+get email --> login
+inner cache --> informações offline
+get RAM --> configurações: gerenciar quantidade de processamento (nem todos os navegadores suportam)
+get connection (verificar tipo de conexão, 4g, 5g, etc)--> configurações: gerenciar quantidade de dados transmitidos +icones de internet do google
+get battery --> diminur valores como brilho e alertar o usuario quando o nivel da bateria estiver fraco +icones de bateria do google
+get USB --> notificar usuario sobre o dispositivo USB, e perguntar sé o usuario gostaria de abrir algum arquivo de dentro deste

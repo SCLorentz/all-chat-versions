@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>testes</title>
+  <style>
+    #dropzone {
+      background: lightgray;
+    padding: 50px;
+    text-align: center;
+    border: 2px dotted gray;
+    }
+    #imgPreview {
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+  <input type="file" id="fileInput" style="display:none">
+  <div id="dropzone" ondragover="dragover()" ondragleave="dragleave()">clique ou Arraste e solte o arquivo aqui</div>
+  <img id="imgPreview" src="" style="display:none">
+
+<script>
+  // função para exibir a imagem selecionada
+  function previewImage(file) {
+    const reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function (e) {
+      const imgPreview = document.getElementById("imgPreview");
+      imgPreview.src = e.target.result;
+      imgPreview.style.display = "block";
+    };
+  }
+
+  // adiciona o evento de arrastar e soltar na div dropzone
+  const dropzone = document.getElementById("dropzone");
+  dropzone.addEventListener("dragover", function (e) {
+    e.preventDefault();
+    this.classList.add("dragover");
+  });
+  dropzone.addEventListener("dragleave", function (e) {
+    e.preventDefault();
+    this.classList.remove("dragover");
+  });
+  dropzone.addEventListener("drop", function (e) {
+    e.preventDefault();
+    this.classList.remove("dragover");
+    const file = e.dataTransfer.files[0];
+    previewImage(file);
+  });
+
+  // adiciona o evento de selecionar arquivo no input fileInput
+  const fileInput = document.getElementById("fileInput");
+  fileInput.addEventListener("change", function (e) {
+    const file = e.target.files[0];
+    previewImage(file);
+  });
+
+  // adiciona o evento de clicar na div dropzone para abrir o seletor de arquivo
+  dropzone.addEventListener("click", function (e) {
+    e.preventDefault();
+    fileInput.click();
+  });
+  
+  
+  function dragover() {
+    dropzone.style.background = "gray";
+  }
+  function dragleave() {
+    dropzone.style.background = "lightgray";
+  }
+</script>
+
+</body>
+</html>

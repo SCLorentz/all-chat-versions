@@ -1,0 +1,58 @@
+armazenar tokens em binario
+combinações possiveis = 2^5, ou seja, armazenamento de informações em 5 bits.
+
+00000    "bat"
+00001    "do"
+00010    "an"
+00011    "ma"
+00100    "%&"
+00101    "um"
+00110    ", "
+00111    "# "
+01000    "ha"
+01001    "& "
+01010    "! "
+01011    "a "
+01100    "su"
+01101    "va"
+01110    "de"
+01111    "di"
+10000    "ão"
+10001    "õe"
+10010    "que"
+10011    "em"
+10100    "ele"
+10101    "com"
+10110    "as"
+10111    "' "
+11000    "in"
+11001    "mu"
+11010    "ar"
+11011    "er"
+11010    "> "
+11011    "re"
+11100    ""
+11101    ""
+11110    ""
+11111    ""
+
+
+
+
+
+não permitir o envio de caracteres especiais como:
+
+Não permitir a mudança de nomes de outros contatos;
+Não permitir emojis no nome de grupo;
+bloquear o uso do caractere "§"
+bloquear o uso de qualquer caractere nulo como ""
+
+
+❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️ = §12❤️§
+
+processo inverso, etapa de fragmentação, processo inverso ao descrito a cima:
+    identificar "§", retroceder até o proximo "§";
+    O valor entre estas duas marcações será replicado o tanto de vezes de acordo ao númerador
+    §12❤️§ = ❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️❤️
+para pensar:
+    "1111111" = "§71§", solução provavel: "§7§1§", ou não agrupar números, ou usar caracteres especiais no lugar de números

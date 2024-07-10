@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="500" style='background:black'>
+  <foreignObject x="100" y="10" width="600" height="400">
+    <body xmlns="http://www.w3.org/1999/xhtml">
+      <button style="width:fit-content;position: relative; height: 100%; background-color: #3498db; color: white; border: none; font-size: 16px;" id='btn'>
+        Clique
+      </button>
+    </body>
+  </foreignObject>
+  <script type="text/ecmascript">
+    <![CDATA[
+        const e = document.getElementById('btn');
+        e.onmouseover = () => {
+            e.style.left = Math.random()*200+'px'
+            e.style.top = Math.random()*200+'px'
+        }
+    ]]>
+  </script>
+  <polygon points="60,30 90,90 30,90" fill='white'>
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 60 70"
+      to="360 60 30"
+      dur="10s"
+      repeatCount="indefinite" />
+      <title>triangle</title>
+  </polygon>
+   <path
+    id="MyPath"
+    fill="none"
+    stroke="white"
+    d="M20,35.09,4.55,19.64a8.5,8.5,0,0,1-.13-12l.13-.13a8.72,8.72,0,0,1,12.14,0L20,10.79l3.3-3.3a8.09,8.09,0,0,1,5.83-2.58,8.89,8.89,0,0,1,6.31,2.58,8.5,8.5,0,0,1,.13,12l-.13.13Z" />
+  <text fill='white'>
+    <textPath href="#MyPath">Cavalo</textPath>
+  </text>
+</svg>

@@ -1,0 +1,7 @@
+25/4/23 - 17:56 --> audio: os audios estão com um bug no envio. O "audioPreview" não atualiza o src, 
+e só toca o primeiro audio arrastado. Nos 2 primeiros envios, o balão de mensagem de audio funciona
+certo. Já nos outros balões, apos este limite. O audio sempre será o mesmo no qual o audio n°2.
+ex: 
+audio 1- error.mp3 -resultado (textarea): audio error.mp3 - resultado (msg final): audio error.mp3
+audio 2- rickA.mp3 - resultado (textarea): audio error.mp3 (1° env) - resultado (msg final): audio rickA.mp3
+audio >3 - outro.mp3 - resultado (textarea): audio error.mp3 - resultado (msg final): audio rickA.mp3 (2° env)

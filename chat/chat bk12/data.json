@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "name": "grupo 1",
+        "thumb": "/img/newGroupImg.svg",
+        "guests": [
+            {
+                "nome": "Vilém",
+                "sobrenome": "Leão",
+                "img": "img/user.svg",
+                "email": "Vilém.Leão@colegiodante.org.br"
+            },
+            {
+                "nome": "nome0",
+                "sobrenome": "sobrenome0",
+                "img": "img/user.svg",
+                "email": "nome.sobrenome@colegiodante.org.br"
+            },
+            {
+                "nome": "nome1",
+                "sobrenome": "sobrenome1",
+                "img": "img/user.svg",
+                "email": "nome.sobrenome@colegiodante.org.br"
+            }
+        ]
+    }
+]

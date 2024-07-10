@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        #customContextMenu {
+  position: absolute;
+  display: none;
+  z-index: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#customContextMenu ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#customContextMenu li {
+  padding: 5px;
+}
+
+#customContextMenu a {
+  text-decoration: none;
+  color: #333;
+}
+
+    </style>
+</head>
+<body>
+    <a id="meuTexto">aaaaaaaaaaaaa aaaaaaaaaaaaaa aaaaaaaaaaa aaaaaaaaaaa a</a>
+    <p oncontextmenu="showContextMenu(event)" style="background: #c3c3c3;padding: 15px;text-align: center;font-family: system-ui;">Clique com o botão direito aqui</p>
+
+<div id="customContextMenu">
+  <ul>
+    <li><a href="#">Opção 1</a></li>
+    <li><a href="#">Opção 2</a></li>
+    <li><a href="#">Opção 3</a></li>
+  </ul>
+</div>
+    <script>
+        function showContextMenu(event) {
+  event.preventDefault();
+
+  // Obter as coordenadas do clique do botão direito
+  const x = event.clientX;
+  const y = event.clientY;
+
+  // Obter o elemento de menu personalizado
+  const customContextMenu = document.getElementById('customContextMenu');
+
+  // Posicionar o elemento de menu personalizado no local do clique do botão direito
+  customContextMenu.style.display = 'block';
+  customContextMenu.style.left = x + 'px';
+  customContextMenu.style.top = y + 'px';
+}
+
+// Ocultar o menu personalizado quando clicado em qualquer lugar da página
+document.addEventListener('click', function() {
+  const customContextMenu = document.getElementById('customContextMenu');
+  customContextMenu.style.display = 'none';
+});
+
+// Seu elemento de texto
+const textElement = document.getElementById('meuTexto');
+
+// Adiciona um evento de clique ao elemento de texto
+textElement.addEventListener('click', function(event) {
+  // Obter a seleção do texto
+  const selection = window.getSelection().toString();
+  
+  // Verifica se a seleção não está vazia
+  if (selection !== '') {
+    // Faz algo com a seleção, como colocar em negrito
+    const formattedText = `<strong>${selection}</strong>`;
+    // Substitui o texto selecionado pelo texto formatado
+    const textWithSelection = textElement.innerHTML.replace(selection, formattedText);
+    textElement.innerHTML = textWithSelection;
+  }
+});
+
+    </script>
+</body>
+</html>

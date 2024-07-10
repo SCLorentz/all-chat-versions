@@ -1,0 +1,22 @@
+display:unset
+
+element.style {
+    padding-top: 6px;
+    border-right: #333333 5px solid;
+    background-color: rgb(71, 71, 71);
+    box-shadow: grey 2px 2px 6px 2px;
+}
+
+float:right;
+
+position: relative; (top/left/right/bottom:30px)
+
+backdrop-filter: blur(8px);
+
+(Cutout Text) --> mix-blend-mode: screen;
+
+position: -webkit-sticky;
+position: sticky;
+top: 0;
+
+background-attachment: fixed; (simple parallax scroll)

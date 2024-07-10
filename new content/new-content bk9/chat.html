@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="pt" style="height: 100%;">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!--js dompurify-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/1.0.3/purify.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat</title>
+    <link id="page-ico" rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/134/134909.png">
+    <style>
+         :root {
+            --baloon-self:#fc852e;
+            --baloon-recived:#ebba16;
+        }
+        body {
+            background: #a4551d;
+            font-family: comfortaa;
+            height: 100%;
+            overflow: hidden;
+            display: grid;
+            grid-template-columns: 0.5fr 1fr;
+            grid-template-rows: 65px 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            margin: 0;
+        }
+        header {
+            user-select: none;
+        }
+        ::selection {
+            color: black;
+            background: white;
+        }
+        .title {
+            margin: 0;
+            padding: 15px;
+            background:black;
+            color: white;
+            background: #b15c1f;
+            text-shadow: 2px 2px black;
+            box-shadow: inset 0 20px 50px #0000004f;
+        }
+        .title>#home-b {
+            float: right;
+            cursor: pointer;
+            color: white;
+        }
+        .title>#home-b:hover {
+            color: #ff3434;
+        }
+        header {
+            grid-area: 1 / 1 / 2 / 3;
+            height: fit-content;
+        }
+        .cont {
+            grid-area: 2 / 1 / 3 / 2;
+            background: #152423;
+            color: white;
+        }
+        .msg {
+            border-top-left-radius: 0.5rem;
+            min-height: 97%;
+            grid-area: 2 / 2 / 3 / 3;
+            /*background: #2a2a2a;*/
+            box-shadow:inset 4px 4px 6px #00000070;
+            background-color: #000000;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25'%3E%3Cdefs%3E%3ClinearGradient id='a' gradientUnits='userSpaceOnUse' x1='0' x2='0' y1='0' y2='100%25' gradientTransform='rotate(189,683,312)'%3E%3Cstop offset='0' stop-color='%23000000'/%3E%3Cstop offset='1' stop-color='%230A2624'/%3E%3C/linearGradient%3E%3Cpattern patternUnits='userSpaceOnUse' id='b' width='300' height='250' x='0' y='0' viewBox='0 0 1080 900'%3E%3Cg fill-opacity='0.06'%3E%3Cpolygon fill='%23444' points='90 150 0 300 180 300'/%3E%3Cpolygon points='90 150 180 0 0 0'/%3E%3Cpolygon fill='%23AAA' points='270 150 360 0 180 0'/%3E%3Cpolygon fill='%23DDD' points='450 150 360 300 540 300'/%3E%3Cpolygon fill='%23999' points='450 150 540 0 360 0'/%3E%3Cpolygon points='630 150 540 300 720 300'/%3E%3Cpolygon fill='%23DDD' points='630 150 720 0 540 0'/%3E%3Cpolygon fill='%23444' points='810 150 720 300 900 300'/%3E%3Cpolygon fill='%23FFF' points='810 150 900 0 720 0'/%3E%3Cpolygon fill='%23DDD' points='990 150 900 300 1080 300'/%3E%3Cpolygon fill='%23444' points='990 150 1080 0 900 0'/%3E%3Cpolygon fill='%23DDD' points='90 450 0 600 180 600'/%3E%3Cpolygon points='90 450 180 300 0 300'/%3E%3Cpolygon fill='%23666' points='270 450 180 600 360 600'/%3E%3Cpolygon fill='%23AAA' points='270 450 360 300 180 300'/%3E%3Cpolygon fill='%23DDD' points='450 450 360 600 540 600'/%3E%3Cpolygon fill='%23999' points='450 450 540 300 360 300'/%3E%3Cpolygon fill='%23999' points='630 450 540 600 720 600'/%3E%3Cpolygon fill='%23FFF' points='630 450 720 300 540 300'/%3E%3Cpolygon points='810 450 720 600 900 600'/%3E%3Cpolygon fill='%23DDD' points='810 450 900 300 720 300'/%3E%3Cpolygon fill='%23AAA' points='990 450 900 600 1080 600'/%3E%3Cpolygon fill='%23444' points='990 450 1080 300 900 300'/%3E%3Cpolygon fill='%23222' points='90 750 0 900 180 900'/%3E%3Cpolygon points='270 750 180 900 360 900'/%3E%3Cpolygon fill='%23DDD' points='270 750 360 600 180 600'/%3E%3Cpolygon points='450 750 540 600 360 600'/%3E%3Cpolygon points='630 750 540 900 720 900'/%3E%3Cpolygon fill='%23444' points='630 750 720 600 540 600'/%3E%3Cpolygon fill='%23AAA' points='810 750 720 900 900 900'/%3E%3Cpolygon fill='%23666' points='810 750 900 600 720 600'/%3E%3Cpolygon fill='%23999' points='990 750 900 900 1080 900'/%3E%3Cpolygon fill='%23999' points='180 0 90 150 270 150'/%3E%3Cpolygon fill='%23444' points='360 0 270 150 450 150'/%3E%3Cpolygon fill='%23FFF' points='540 0 450 150 630 150'/%3E%3Cpolygon points='900 0 810 150 990 150'/%3E%3Cpolygon fill='%23222' points='0 300 -90 450 90 450'/%3E%3Cpolygon fill='%23FFF' points='0 300 90 150 -90 150'/%3E%3Cpolygon fill='%23FFF' points='180 300 90 450 270 450'/%3E%3Cpolygon fill='%23666' points='180 300 270 150 90 150'/%3E%3Cpolygon fill='%23222' points='360 300 270 450 450 450'/%3E%3Cpolygon fill='%23FFF' points='360 300 450 150 270 150'/%3E%3Cpolygon fill='%23444' points='540 300 450 450 630 450'/%3E%3Cpolygon fill='%23222' points='540 300 630 150 450 150'/%3E%3Cpolygon fill='%23AAA' points='720 300 630 450 810 450'/%3E%3Cpolygon fill='%23666' points='720 300 810 150 630 150'/%3E%3Cpolygon fill='%23FFF' points='900 300 810 450 990 450'/%3E%3Cpolygon fill='%23999' points='900 300 990 150 810 150'/%3E%3Cpolygon points='0 600 -90 750 90 750'/%3E%3Cpolygon fill='%23666' points='0 600 90 450 -90 450'/%3E%3Cpolygon fill='%23AAA' points='180 600 90 750 270 750'/%3E%3Cpolygon fill='%23444' points='180 600 270 450 90 450'/%3E%3Cpolygon fill='%23444' points='360 600 270 750 450 750'/%3E%3Cpolygon fill='%23999' points='360 600 450 450 270 450'/%3E%3Cpolygon fill='%23666' points='540 600 630 450 450 450'/%3E%3Cpolygon fill='%23222' points='720 600 630 750 810 750'/%3E%3Cpolygon fill='%23FFF' points='900 600 810 750 990 750'/%3E%3Cpolygon fill='%23222' points='900 600 990 450 810 450'/%3E%3Cpolygon fill='%23DDD' points='0 900 90 750 -90 750'/%3E%3Cpolygon fill='%23444' points='180 900 270 750 90 750'/%3E%3Cpolygon fill='%23FFF' points='360 900 450 750 270 750'/%3E%3Cpolygon fill='%23AAA' points='540 900 630 750 450 750'/%3E%3Cpolygon fill='%23FFF' points='720 900 810 750 630 750'/%3E%3Cpolygon fill='%23222' points='900 900 990 750 810 750'/%3E%3Cpolygon fill='%23222' points='1080 300 990 450 1170 450'/%3E%3Cpolygon fill='%23FFF' points='1080 300 1170 150 990 150'/%3E%3Cpolygon points='1080 600 990 750 1170 750'/%3E%3Cpolygon fill='%23666' points='1080 600 1170 450 990 450'/%3E%3Cpolygon fill='%23DDD' points='1080 900 1170 750 990 750'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect x='0' y='0' fill='url(%23a)' width='100%25' height='100%25'/%3E%3Crect x='0' y='0' fill='url(%23b)' width='100%25' height='100%25'/%3E%3C/svg%3E");
+            background-attachment: fixed;
+            background-size: cover;
+            /**/
+            color: white;
+            padding: 15px 15px 0 15px;
+            display: grid;
+            grid-template-columns: 1fr 0.1fr;
+            grid-template-rows: 1fr 0.2fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+        .baloon {
+            display: grid;
+            grid-template-columns: 1fr 0.05fr;
+            grid-template-rows: 1fr 0.2fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            background: var(--baloon-self);
+            box-shadow: 4px 4px 6px black;
+            padding: 5px;
+            border-radius: 0.5rem 0.5rem 0 0;
+            min-height: 50px;
+            max-height: 100%;
+            overflow: hidden;
+            grid-area: 2 / 1 / 3 / 3;
+        }
+        #ur-msg {
+            background: transparent;
+            resize: none;
+            overflow: auto;
+            width: -webkit-fill-available;
+            outline: none;
+            border: 0;
+            font-family: 'Comfortaa';
+            font-size: medium;
+            color: white;
+            grid-area: 1 / 1 / 3 / 2;
+        }
+        #ur-msg::placeholder {
+            color:rgb(223, 223, 223);
+        }
+        #ur-msg::-webkit-scrollbar {
+            width: 0;
+        }
+        #ur-msg::-webkit-scrollbar-track {
+            background: red;
+        }
+        #ur-msg::selection {
+            background:black;
+            color: white;
+        }
+        .cont>a {
+            cursor: pointer;
+            box-shadow: 4px 4px 6px #00000061;
+            border-radius: 0.5rem;
+            margin: 3px;
+            color: white;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+        }
+        .cont>a>img {
+            height: 50px;
+            margin: 0px 10px 0px 0px;
+            border-radius: 0.5rem;
+            user-select: none;
+            -webkit-user-drag: none;
+        }
+        .cont>a>a::selection {
+            color: white;
+            background: black;
+        }
+        .cont>a:hover {
+            box-shadow: 6px 6px 8px #00000061;
+        }
+        .cont::-webkit-scrollbar {
+            width: 5px;
+        }
+        .cont::-webkit-scrollbar-thumb {
+            background:#2a2a2a;
+        }
+        div.msgboxconfigs {
+            grid-area: 1 / 1 / 3 / 3;
+            overflow-x: hidden !important;
+            background: #8f4a18;
+            padding: 15px;
+            background: #0f1a19;
+            border-top-left-radius: 0.5rem;
+        }
+        div.msgbox {
+            grid-area: 1 / 1 / 2 / 3;
+            word-break: break-word;
+            overflow-x: hidden !important;
+        }
+        div.msgbox>div {
+            display: flex;
+            flex-direction: row;
+            margin: 5px 0;
+            width: fit-content;
+        }
+        div.msgbox>div>a {
+            background: var(--baloon-self);
+            color: white;
+            padding: 5px;
+            border-radius: 0 0.3rem 0.3rem;
+            min-width: 15%;
+            max-width: 90%;
+            width: fit-content;
+            box-shadow: 4px 4px 6px #00000057;
+        }
+        div.msgbox>div>a>p {
+            font-size: smaller;
+            float: right;
+            margin: 8px 0 0 8px;
+            color: #d5d5d5;
+        }
+        div.msgbox>div>a>img {
+            width: 100%;
+            max-width: 400px;
+            display: block;
+            user-select: none;
+        }
+        
+        div#recived>svg {
+            transform: rotateY(180deg);
+            color: var(--baloon-recived) !important;
+        }
+        div#recived {
+            margin: 5px 5px 5px auto !important;
+            flex-direction: row-reverse !important;
+        }
+        div#recived>a {
+            background: var(--baloon-recived) !important;
+            border-radius: 0.3rem 0 0.3rem 0.3rem !important;
+        }
+        div.msgbox>div::selection {
+            color: white;
+            background: black;
+        }
+        div.msgbox::-webkit-scrollbar {
+            width: 15px;
+        }
+        div.msgbox::-webkit-scrollbar-thumb {
+            background:#fc852e;
+            border-radius: 0.3rem;
+        }
+        #msg-env {
+            grid-area: 1 / 3 / 2 / 2;
+            background: black;
+            color: white;
+            border-radius: 0.5rem 0.5rem 0 0;
+            margin: 0 10px;
+            cursor: pointer;
+            width: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            transition:all 1s cubic-bezier(0.33, 0.96, 0.6, -0.15);
+        }
+        div#msg-env:hover {
+            background: #202020;
+        }
+        div#msg-env:hover>span {
+            animation: shake 0.3s ease;
+        }
+        @keyframes shake {
+            0% {transform: rotate(0);}
+            25% {transform: rotate(15deg);}
+            50% {transform:rotate(0)}
+            75% {transform: rotate(-15deg);}
+            100% {transform: rotate(0deg);}
+        }
+        .msg-tools {
+            grid-area: 2 / 2 / 3 / 2;
+        }
+        /*input style*/
+        input[type="color"]::-webkit-color-swatch-wrapper {
+            padding: 0;
+            width: 100%;
+        }
+        input[type="color"]::-webkit-color-swatch {
+            border: none;
+            border-radius: 0 0 0.5rem 0.5rem;
+        }
+        /**/
+        #new-group,#add-person {
+            padding: 5px;
+            margin: 1px;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            display: block;
+            height: fit-content;
+            float: right;
+            user-select: none;
+            transition: all 1s cubic-bezier(0.85, 0.82, 0.28, 1.46);
+        }
+        #new-group:hover,#add-person:hover {
+            background: #0000004d;
+        }
+        ::placeholder {
+            font-family: comfortaa;
+        }
+        #pesquisa {
+            grid-area: 1 / 1 / 2 / 2;
+            outline: 0;
+            border: 0;
+            height: 40px;
+            width: 100%;
+            border-radius: 0.5rem;
+            padding: 5px;
+            font-family: comfortaa;
+        }
+        #pesquisa::-webkit-search-cancel-button {
+            cursor: pointer;
+            /*display: none;*/
+        }
+        #tools {
+            display: grid;
+            grid-template-columns: 1.8fr repeat(2, 0.15fr);
+            grid-template-rows: 0.2fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            padding: 10px 5px;
+            margin-bottom: 3px;
+            background: #a4551d;
+            box-shadow: 4px 4px 6px #00000070;
+            border-radius: 0 0 0.5rem 0.5rem;
+        }
+        /*audio*/
+        /*#audioPreview {
+            grid-area: 1 / 1 / 3 / 2;
+            height: 100%;
+            width: calc(100% - 5px);
+        }*/
+        audio#audioPreview::-webkit-media-controls-enclosure {
+            border-radius: 0.5rem;
+            height: 100%;
+            background:transparent;
+        }
+        ::-webkit-media-controls-time-remaining-display {
+            display: none;
+        }
+        ::-webkit-media-controls-current-time-display {
+            color: white;
+        }
+        #audioPreview::-webkit-media-controls-timeline-progress-bar {
+            background-color: red;
+        }
+        
+        /*botão de volume*/
+        #audioPreview::-webkit-media-controls-volume-control-hover-background {
+            border-radius: 0.5rem;
+        }
+        audio#audioPreview::-webkit-media-controls-volume-control-container:hover {
+            background: var(--baloon-recived);
+            border-radius: 0.5rem;
+        }
+        ::-webkit-media-controls-progress-bar {
+            background-color: red;
+        }
+        ::-webkit-media-controls-progress-bar {
+             background-color: red;
+        }
+        /*context menu*/
+        #customContextMenu {
+            position: absolute;
+            display: none;
+            z-index: 1;
+            padding: 5px;
+            background: rgb(252, 133, 46);
+            border: none;
+            color: white;
+            box-shadow: black 4px 4px 60px;
+            border-radius: 0.3rem;
+        }
+
+        #customContextMenu ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        #customContextMenu li {
+            padding: 5px;
+            transition: all 1s cubic-bezier(0.87, 0.2, 0.68, 1.76);
+            cursor: pointer;
+            text-align: center;
+        }
+        #customContextMenu li:hover {
+            box-shadow: inset 4px 4px 60px #0000005e;
+        }
+
+        #customContextMenu a {
+            text-decoration: none;
+            color: inherit;
+        }
+        /**/
+        .mecimga {
+            user-select: none;
+            cursor: pointer;
+        }
+        .mecimga>span {
+            visibility: hidden;
+            color: white;
+            text-shadow: 0 0 5px black;
+            font-size: 100px;
+        }
+        .mecimga:hover span {
+            visibility: visible;
+        }
+        .mecimga>img {
+            -webkit-user-drag: none;
+            -webkit-user-drag: none;
+            border: dashed 2px #43706d;
+            background: #1f3432;
+        }
+        #mecab {
+            transition: all 1s ease;
+            height: fit-content;
+            border-radius: 0.5rem;
+            padding: 5px 0 5px 5px;
+            margin: 0 5px 0 0;
+        }
+        #mecab:hover {
+            background: #0000004d;
+        }
+    </style>
+</head>
+<body>
+    <header><h1 class="title">Chat <a href="backup-page1.html" id="home-b"><span translate="no" class="material-symbols-outlined" title="back to home" style="font-size: larger;transition: all 1s cubic-bezier(0.25, 0.71, 0.92, 0.12)">home</span></a></h1></header>
+    <div id="cont" class="cont" style="overflow: auto;display: flex;flex-direction: column;">
+        <div id="tools" translate="no">
+            <a id="new-group" title="create new group" onclick="createagroup()">
+                <span class="material-symbols-outlined">add</span>
+            </a>
+            <a id="add-person" title="adicionar novo contato" onclick="addperson()">
+                <span class="material-symbols-outlined">person_add</span>
+            </a>
+            <input id="pesquisa" type="search" placeholder="pesquisar grupos/contatos">
+        </div>
+        <!--devs-->
+        <a href="#headmaster" translate="no" title="desenvolvedor chefe" style="transition: all 0.3s cubic-bezier(0.8, 0.26, 0.07, 0.72) 0s;">
+            <img src="img/headmaster.webp" style="height: 50px;margin: 0 10px 0 0;border-radius: 0.5rem;image-rendering: pixelated;" class="thumb-img">
+            headmaster
+        </a>
+        <!--end-->
+    </div>
+    <div id="customContextMenu">
+        <ul>
+            <p style="border-bottom: 1px solid;margin:0;">formatação</p>
+            <li><a href="#" id="opcao1">Opção 1</a></li>
+            <li><a href="#">Opção 2</a></li>
+            <li><a href="#">Opção 3</a></li>
+        </ul>
+    </div>
+    <div class="msg" id="msg">
+        <div class="msgbox" style="display: none;height: 400px;flex-direction: column;overflow: auto;">
+            <!--copy svg-->
+            <a><div id="copy"><svg viewBox="0 0 8 13" height="13" width="8" preserveAspectRatio="xMidYMid meet"  version="1.1" x="0px" y="0px" enable-background="new 0 0 8 13" xml:space="preserve"><path opacity="0.13" fill="#0000000" d="M1.533,3.568L8,12.193V1H2.812 C1.042,1,0.474,2.156,1.533,3.568z"></path><path fill="currentColor" d="M1.533,2.568L8,11.193V0L2.812,0C1.042,0,0.474,1.156,1.533,2.568z"></path></svg></div><a>mande uma mensagem!</a></a>
+           <!--end of copy-->
+        </div>
+        <div class="baloon">
+            <audio controls id="audioPreview" style="display: none;">
+                Your browser does not support the audio element.
+            </audio>
+            <svg id="svgPreview" style="display:none"></svg>
+            <img id="imgPreview" src="" style="display:none;grid-area: 1 / 1 / 3 / 2;height: 100%;">
+            <textarea oncontextmenu="showContextMenu(event)" type="text" placeholder="vontade de falar..." id="ur-msg" required title="" ondragover="dragover()" ondragleave="dragleave()"></textarea>
+            <input type="color" value="#ffffff" id="color" style="grid-area: 2 / 3 / 3 / 2;cursor:pointer;border: 0;padding: 0;background: transparent;width: 40px;height: 25px;" title="pick a color">
+            <div id="msg-env" onclick="send()"><span class="material-symbols-outlined" translate="no" style="user-select: none;">send</span></div>
+        </div>
+        <!--<div style="height: 0px;margin: 0 0 0 auto;">
+            <span onclick='alert("preguça")' class="material-symbols-outlined" style="user-select:none;/*top:80%;left: 96%*/;background:#a6561d;box-shadow:4px 4px 6px #00000070;border-radius:0.5rem;position:fixed;z-index:1;cursor:pointer;height:30px;width:30px;display:flex;justify-content:center;align-items: center;">
+                keyboard_double_arrow_down
+            </span>
+        </div>-->
+    </div>
+    <script>
+        //load
+        document.addEventListener("DOMContentLoaded", function() {
+            const hash = window.location.hash;
+            // Remover o caractere "#" do hash
+            const numerosString = hash.slice(1);
+            // Dividir a string em um array de números
+            const numeros = numerosString.split('-').map(Number);
+            if(numeros.some(num => num != 0)) {
+                console.log("abrir grupo, id:",numeros);
+            } else {
+                console.log("nenhum grupo para abrir");
+            }
+            console.warn("conteudo inacabado, servidor necessario");
+        });
+        //headmaster
+        function headmaster(event) {
+            document.body.remove();
+            const body = document.createElement("body");
+            document.querySelector("html").appendChild(body);
+            const headmasterpage = document.createElement("h1");
+            headmasterpage.innerHTML = "error 404<br>headmaster not found";
+            headmasterpage.style.position= "fixed";
+            headmasterpage.style.width= "-webkit-fill-available";
+            headmasterpage.style.height= "-webkit-fill-available";
+            headmasterpage.style.display= "flex";
+            headmasterpage.style.justifyContent= "center";
+            headmasterpage.style.alignItems= "center";
+            headmasterpage.style.textAlign= "center";
+            headmasterpage.style.fontSize= "50px";
+            headmasterpage.style.color = "white";
+            headmasterpage.style.textShadow = "4px 4px black";
+            headmasterpage.style.userSelect = "none";
+            document.body.appendChild(headmasterpage);
+        }
+        //has change
+        window.addEventListener("hashchange", function() {
+            if (window.location.hash === "#headmaster") {
+                headmaster();
+            }
+        });
+        //load
+        document.addEventListener("DOMContentLoaded", function(){
+            if (window.location.hash === "#headmaster") {
+                headmaster();
+            }
+        }
+        );
+        //menu texto
+        function showContextMenu(event) {
+            event.preventDefault();
+            // Obter as coordenadas do clique do botão direito
+            const x = event.clientX;
+            const y = event.clientY;
+
+            // Obter o elemento de menu personalizado
+            const customContextMenu = document.getElementById('customContextMenu');
+
+            //obter palavra selecionada
+            const selection = window.getSelection();
+            const range = selection.getRangeAt(0);
+            const selectedText = range.toString();
+            // Adicionar a palavra selecionada ao primeiro item do menu
+            const item1 = document.getElementById('opcao1');
+            item1.innerHTML = 'Negrito: ' + selectedText;
+
+            // Posicionar o elemento de menu personalizado no local do clique do botão direito
+            customContextMenu.style.display = 'block';
+            customContextMenu.style.left = x + 'px';
+            customContextMenu.style.top = (y - customContextMenu.offsetHeight) + "px";
+        }
+        // Ocultar o menu personalizado quando clicado em qualquer lugar da página
+        document.addEventListener('click', function() {
+            const customContextMenu = document.getElementById('customContextMenu');
+            customContextMenu.style.display = 'none';
+        });
+        //rick astley
+        let rickA = new Audio("sound/rick-astley-rickrolls-you.mp3");
+        //thumb img// modifica o titulo do elemento para a sua localização
+        setInterval(thumb, 1000);
+        function thumb() {
+            var x = document.getElementsByClassName("thumb-img");
+            for (var i = 0; i < x.length; i++) {
+                x[i].title = x[i].src;
+            }
+        }
+        //detecta o uso do enter
+        const textarea = document.getElementById("ur-msg");
+
+        // Verifica se a tecla pressionada foi "Enter"
+        textarea.addEventListener("keydown", function(event) {
+        if (event.key === "Enter") {
+            event.preventDefault();
+            // Insira o comando a ser executado aqui
+            send();
+        }
+        });
+        //obter comando anterior/voltar
+        let lastcommand = "";
+        let comandoatual = "";
+            textarea.addEventListener("keydown", function(event) {
+                if (event.key === "ArrowUp" && lastcommand !== "") {
+                    comandoatual = textarea.value;
+                    textarea.value = lastcommand;
+                    event.preventDefault();
+                }
+            });
+            textarea.addEventListener("keydown", function(event) {
+                if (event.key === "ArrowDown") {
+                    textarea.value = comandoatual;
+                    event.preventDefault();
+                }
+            });
+        //ur-msg
+        const urmsg = document.getElementById("ur-msg").value;
+        const color = document.getElementById("color");
+        //muda a cor do texto
+        color.addEventListener('input', () => {
+             const colorvalue = color.value;
+             document.getElementById("ur-msg").style.color = colorvalue;
+        });
+        //envia a mensagem
+        function send() {
+            const textenv = document.getElementById("ur-msg").value;
+            const textenvspace = textenv.replace(/^\s+/, "").replace(/\u200E\s/g, "");
+            if (document.getElementById("ur-msg").value !== "" && textenvspace !== "") {
+                //data
+                const div = document.createElement("div");
+                div.className = "send";
+                const d = new Date();
+                const para = document.createElement("a");
+                const datemsg = document.createElement("p");
+                //
+                const urmsg = document.getElementById("ur-msg").value;
+                const textenv = urmsg.trim();
+                const textenvspace = textenv.replace(/^\s+/, "").replace(/\u200E\s/g, "");
+
+                const handlers = {
+                "//": function(text) {
+                    para.innerHTML = text;
+                    //
+                    const textoComBody = textenvspace.substring(2);
+                    // Remover o conteúdo do body
+                    const semBody = textoComBody.replace(/<body[^>]*>((.|[\n\r])*)<\/body>/gm, "$1");
+                    // Remover o conteúdo do head
+                    const semHead = semBody.replace(/<head.*?>.*?<\/head>/gs, "");
+                    // Remover estilos CSS
+                    const semCSS = semHead.replace(/<style.*?>.*?<\/style>/gs, "");
+                    // Remover scripts
+                    const semJS = semCSS.replace(/<script.*?>.*?<\/script>/gs, "");
+                    //
+                    para.innerHTML = semJS;
+                    lastcommand = textenvspace;
+                },
+                "++": function(text) {
+                    para.textContent = text;
+                    para.style.fontSize = "x-large";
+                    para.innerHTML = textenvspace.substring(2);
+                },
+                "--": function(text) {
+                        para.textContent = text;
+                        para.style.fontSize = "smaller";
+                        para.innerHTML = textenvspace.substring(2);
+                },
+                "**": function(text) {
+                        para.style.background = "black";
+                        clone.style.color = "black";
+                        para.innerHTML = textenvspace.substring(2);
+                },
+                default: function(text) {
+                    para.textContent = text;
+                    para.style.fontSize = "large";
+                }
+                };
+                //clone
+                const node = document.getElementById("copy").lastChild;
+                const clone = node.cloneNode(true);
+                clone.style.color = "#fc852e";
+                clone.style.boxshadow= "4px 4px 6px #00000057";
+                div.appendChild(clone);
+                //
+                const prefix = urmsg.substring(0, 2);
+                const handler = handlers[prefix] || handlers["default"];
+                handler(textenvspace.substring(0));
+                //
+                if(urmsg =="page://snake-game") {
+                    para.innerHTML = "soon...";
+                } else if(urmsg =="page://rickA.play()") {
+                    rickA.play();
+                    para.innerHTML = "I love Rick Astley <3";
+                }
+                const links = urmsg.match(/https?:\/\/\S+/gi);
+                if (links) {
+                    console.log("link detectado:",links);
+                    links.forEach(function(link) {
+                        const alinks = `<a href="${link}" title="acessar: ${link}" target="_blank">${link}</a>`;
+                        const subalinks = para.innerHTML.replace(link, alinks);
+                        para.innerHTML = subalinks;
+                    });
+                }
+                //
+                para.style.color = document.getElementById("color").value;
+                datemsg.textContent = d.getHours().toString().padStart(2, '0')+":"+d.getMinutes().toString().padStart(2, '0');
+                datemsg.style.fontSize = "small";
+                //
+                div.appendChild(para);
+                para.style.position = "relative";
+                //detectar grupo no qual a mensagem sera enviada
+                const elementosmsgbox = document.querySelectorAll('.msgbox');
+                for (let i = 0; i < elementosmsgbox.length; i++) {
+                    let elementmsgbox = elementosmsgbox[i];
+                    if (elementmsgbox.style.display === "flex") {
+                        console.log("Elemento com display:flex encontrado: ", elementmsgbox);
+                        elementmsgbox.appendChild(div);
+                        //scroll to the bottom
+                        elementmsgbox.scrollTop = elementmsgbox.scrollHeight;
+                    }
+                }
+                //
+                para.appendChild(datemsg);
+                document.getElementById("ur-msg").value = "";
+                document.getElementById("ur-msg").style.color = "white";
+                //para.href = imgPreview.src;
+                if (dropzone.style.display == "none") {
+                    dropzone.style.display = "block";
+                    imgPreview.src = "";
+                    imgPreview.style.display = "none";
+                    document.getElementById("audioPreview").style.display = "none";
+                    document.getElementById("sourcePreview").src = "";
+                }
+                //
+                document.getElementById("color").value="#ffffff";
+                div.style.position = "relative";
+                //div.id = "recived";
+                if (div.id == "recived") {
+                    div.style.left = div.offsetWidth +5+ "px";
+                } else {
+                    div.style.left = "-"+div.offsetWidth + "px";
+                }
+                div.style.transition = "all 0.3s cubic-bezier(0.8, 0.26, 0.07, 0.72) 0s";
+                setTimeout(left0, 100);
+                function left0() {
+                    div.style.left = "0";
+                }
+            }
+        }
+        let gn = 1;
+        let idelement;
+
+        function createagroup() {
+            // incrementa o valor de gn
+            gn++;
+
+            // cria o grupo icon
+            const group = document.createElement("a");
+            document.getElementById("cont").appendChild(group);
+            group.className = gn;
+            group.href = "#"+group.className;
+            group.id = "groupico";
+            group.setAttribute("translate", "no");
+            //anim.
+            group.style.position = "relative";
+            group.style.left = "-"+group.offsetWidth + "px";
+            group.style.transition = "all 0.3s cubic-bezier(0.8, 0.26, 0.07, 0.72) 0s";
+            setTimeout(left0, 100);
+            function left0() {
+                group.style.left = "0";
+                //group.style.boxShadow = "60px -2px 0 1px #b15c1f";
+            }
+            //
+            group.onclick = function () {
+                function toggleElementVisibility(classNames, activeClassName) {
+                    // Esconde todos os elementos com as classes passadas
+                    classNames.forEach(function(className) {
+                        var elements = document.getElementsByClassName(className);
+                        for (var i = 0; i < elements.length; i++) {
+                        elements[i].style.display = "none";
+                        }
+                    });
+                    // Exibe o elemento com a classe passada como ativa
+                    document.getElementById(activeClassName).style.display = "flex";
+                    groupconfigsA.style.display = "flex";
+                    document.getElementById("msg").style.padding = "15px 15px 0 15px";
+                }
+                toggleElementVisibility(["msgbox", "msgboxconfigs"], this.className);
+            }
+            // cria o grupo chat
+            const msgelement = document.createElement("div");
+            //cria o group chat configs
+            const msgelementconfigs = document.createElement("div");
+            //groupconfigs
+            const groupconfigsA = document.createElement("a");
+            msgelement.appendChild(groupconfigsA);
+            const groupconfigs = document.createElement("span");
+            groupconfigsA.style.margin = "0 0 0 auto";
+            groupconfigsA.appendChild(groupconfigs);
+            groupconfigs.className = "material-symbols-outlined";
+            groupconfigs.innerHTML = "more_vert";
+            groupconfigs.style.position = "fixed";
+            groupconfigs.style.right = "3%";
+            groupconfigs.style.cursor = "pointer";
+            groupconfigs.style.userSelect = "none";
+            groupconfigsA.onclick=function() {
+                //console.log(msgelement.id);
+                const configsid = msgelement.id;
+                //console.log(configsid);
+                const configsclass = "msgboxconfigs";
+                const element = document.querySelector(`[id="${configsid}"].${configsclass}`);
+                if (element) {
+                    element.style.display = "flex";
+                }
+                //msgelement.style.display = "none";
+                document.getElementById("msg").style.padding = "0";
+                groupconfigsA.style.display = "none";
+                var elements1 = document.getElementsByClassName("send");
+                for (var element1 of elements1) {
+                    element1.style.display = "none";
+                }
+            }
+            msgelement.className = "msgbox";
+            msgelement.id = gn;
+            msgelement.style.height = "calc(100% - 5px)";
+            msgelement.style.flexDirection = "column";
+            msgelement.style.overflow = "auto";
+            msgelement.style.display = "none";
+            document.getElementById("msg").appendChild(msgelement);
+            //scroll to the bottom
+            /*const btnbottom = document.createElement("a");
+            btnbottom.style.height = "90px";
+            btnbottom.style.width = "90px";
+            btnbottom.style.background = "red";
+            msgelement.appendChild(btnbottom);*/
+            //
+            msgelementconfigs.className = "msgboxconfigs";
+            msgelementconfigs.id = gn;
+            msgelementconfigs.style.height = "calc(100% - 5px)";
+            msgelementconfigs.style.overflow = "auto";
+            msgelementconfigs.style.display = "none";
+            msgelementconfigs.style.flexWrap = "wrap";
+            msgelementconfigs.style.alignContent = "flex-start";
+            document.getElementById("msg").appendChild(msgelementconfigs);
+            const mecab = document.createElement("span");
+            mecab.innerHTML = "arrow_back_ios";
+            mecab.className = "material-symbols-outlined";
+            mecab.id = "mecab";
+            mecab.style.userSelect = "none";
+            mecab.style.cursor = "pointer";
+            mecab.onclick = function () {
+                const configsid = msgelement.id;
+                const configsclass = "msgboxconfigs";
+                const element = document.querySelector(`[id="${configsid}"].${configsclass}`);
+                if(element) {
+                    element.style.display = "none";
+                    document.getElementById("msg").style.padding = "15px 15px 0px";
+                }
+                groupconfigsA.style.display = "flex";
+                var elements1 = document.getElementsByClassName("send");
+                for (var element1 of elements1) {
+                    element1.style.display = "flex";
+                }
+                elementmsgbox.scrollTop = elementmsgbox.scrollHeight;
+            }
+            msgelementconfigs.appendChild(mecab);
+            const meci = document.createElement("a");
+            // get the image from the group
+            const mecimga = document.createElement("div");
+            mecimga.className = "mecimga";
+            mecimga.style.display = "flex";
+            mecimga.style.justifyContent= "center";
+            mecimga.style.alignItems = "center";
+            mecimga.style.width = "50%";
+            const mecimgain = document.createElement("input");
+            mecimgain.type = "file";
+            mecimgain.style.display = "none";
+            msgelementconfigs.appendChild(mecimgain);
+            mecimga.onclick = function() {
+                mecimgain.click();
+                console.warn("image selection incomplete!");
+                console.log();
+                let error = new Audio("sound/error.webm");
+                error.play();
+            }
+            //edit img
+            const mecimgedit = document.createElement("span");
+            mecimgedit.className = "material-symbols-outlined";
+            mecimgedit.textContent = "edit";
+            mecimgedit.style.position = "fixed";
+            mecimga.appendChild(mecimgedit);
+            const mecimg = document.createElement("img");
+            mecimg.src = "newgroup.webp";
+            mecimg.style.width = "100%";
+            mecimga.appendChild(mecimg);
+            //info
+            const infomenu = document.createElement("div");
+            infomenu.className = "infomenu";
+            infomenu.innerText = "configurações";
+            infomenu.style.display = "flex";
+            infomenu.style.flexDirection = "column";
+            infomenu.style.padding = "5px";
+            const mecinfo  = document.createElement("a");
+            mecinfo.textContent = "name";
+            msgelementconfigs.appendChild(mecimga);
+            msgelementconfigs.appendChild(infomenu);
+            infomenu.appendChild(mecinfo);
+            //meci --> msg elements configs id
+            meci.innerHTML = "config id: "+msgelementconfigs.id;
+            infomenu.appendChild(meci);
+            //msgelement.appendChild("btnbottom");
+
+            //group title id
+            const grouptitle = document.createElement("a");
+            grouptitle.textContent = "group id: "+ msgelement.id;
+            msgelement.appendChild(grouptitle);
+            grouptitle.style.marginBottom= "10px";
+
+            // cria a imagem
+            const groupimg = document.createElement("img");
+            groupimg.src = "newgroup.webp";
+            groupimg.className = "thumb-img";
+            group.appendChild(groupimg);
+
+            // cria o nome do grupo
+            const groupname = document.createElement("a");
+            groupname.textContent = "new group " + gn;
+            groupname.style.cursor = "pointer";
+            groupname.style.outline = "0";
+            groupname.style.textDecoration = "none";
+            groupname.style.color = "white";
+            groupname.style.maxWidth = "100%";
+            groupname.style.minWidth = "90px";
+            groupname.style.width = "100%"
+            group.appendChild(groupname);
+            //groupname.spellcheck = false; <-- sublinhar frases erradas
+
+            //create edit-btn
+            const editbtn = document.createElement("span");
+            editbtn.textContent = "edit";
+            editbtn.className = "material-symbols-outlined";
+            editbtn.id = "edit-group";
+            editbtn.style.margin= "0 0 0 auto";
+            editbtn.style.userSelect="none";
+            group.appendChild(editbtn);
+            //edit-btn function
+            editbtn.onclick = function() {
+                const text = groupname.innerText;
+                const textoSemEspacos = text.replace(/^\s+/, "");
+                if (editbtn.textContent=="cancel" && groupname.textContent!=="" && textoSemEspacos !== "") {
+                    if(groupname.textContent=="Rick Astley") {
+                        if (rickA.paused) {
+                            rickA.play();
+                            const text = groupname.innerText;
+                        }
+                        //groupimg.src = "img/rick-astley-never-gonna-give-you.webp"
+                        editbtn.textContent="edit";
+                        groupname.contentEditable = "false";
+                        groupname.style.cursor = "pointer";
+                        group.title = "rick rolled";
+                    } else {
+                    groupname.textContent = textoSemEspacos;
+                    group.title = groupname.textContent;
+                    editbtn.textContent="edit";
+                    groupname.contentEditable = "false";
+                    groupname.style.cursor = "pointer";
+                    //efeitos especiais
+                    groupimg.style.filter = "none";
+                    group.style.border = "none";
+                    //
+                    }
+                } else {
+                    editbtn.textContent ="cancel";
+                    groupname.contentEditable = "true";
+                    groupname.style.cursor = "auto";
+                }
+            };
+            //edit-btn limite de caracteres
+            const maxLength = 20;
+
+            groupname.addEventListener("keyup", function() {
+            if (this.innerText.length > maxLength) {
+                this.innerText = this.innerText.substring(0, maxLength);
+                alert("Limite de caracteres atingido!");
+            }
+            });
+            //block enter
+            groupname.addEventListener("keydown", function(event) {
+                if (event.keyCode === 13) {
+                    editbtn.click();
+                    event.preventDefault();
+                }
+            });
+            //create del-btn
+            const spandelbtn = document.createElement("span")
+            const delbtn = document.createElement("a");
+            spandelbtn.textContent = "delete";
+            spandelbtn.className = "material-symbols-outlined";
+            delbtn.className = group.className;
+            delbtn.style.userSelect = "none";
+            msgelementconfigs.appendChild(delbtn);
+            delbtn.appendChild(spandelbtn);
+            delbtn.style.cursor = "pointer";
+            delbtn.style.margin = "0 0 0 auto";
+            delbtn.style.height = "fit-content";
+            delbtn.onclick = function() {
+                if (confirm("deseja apagar este grupo?") == true) {
+                    //anim.
+                    group.style.transition = "all 0.3s cubic-bezier(0.8, 0.26, 0.07, 0.72) 0s";
+                    group.style.position = "relative";
+                    group.style.left = "-"+group.offsetWidth + "px";
+                    setTimeout(del, 300);
+                    idelement1 = this.className;
+                    function del() {
+                        location.hash = "";
+                        group.remove();
+                        document.getElementById(idelement1).remove();
+                        const configsid = idelement1;
+                        const configsclass = "msgboxconfigs";
+                        const element = document.querySelector(`[id="${configsid}"].${configsclass}`);
+                        document.getElementById("msg").style.padding = "15px 15px 0px";
+                        if (element) {
+                            element.remove();
+                        }
+                    }
+                }
+            }
+        }
+        function addperson() {
+            const usercont = document.createElement("a")
+            document.getElementById("cont").appendChild(usercont);
+            //usercont.className = gn;
+            usercont.id = "contpico";
+            usercont.setAttribute("translate", "no");
+
+            // cria a imagem
+            const contimg = document.createElement("img");
+            contimg.src = "img/user.png";
+            contimg.className = "thumb-img";
+            usercont.appendChild(contimg);
+
+            // cria o nome do contato
+            const contname = document.createElement("a");
+            //contname.textContent = "new cont." + gn;
+            contname.textContent = "new cont.";
+            contname.style.cursor = "pointer";
+            contname.style.outline = "0";
+            contname.style.textDecoration = "none";
+            contname.style.color = "white";
+            usercont.appendChild(contname);
+        }
+        // função para exibir a imagem selecionada
+        function previewImage(file) {
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function (e) {
+            const imgPreview = document.getElementById("imgPreview");
+            imgPreview.src = e.target.result;
+            imgPreview.style.display = "block";
+            };
+        }
+        // adiciona o evento de arrastar e soltar na div dropzone
+        const dropzone = document.getElementById("ur-msg");
+        dropzone.ondragover = function (e) {
+            e.preventDefault();
+            this.classList.add("dragover");
+            dropzone.style.background = "#a34f1273";
+        };
+        dropzone.ondragleave = function (e) {
+            e.preventDefault();
+            this.classList.remove("dragover");
+            dropzone.style.background = "transparent";
+        };
+        dropzone.addEventListener("drop", function (e) {
+            e.preventDefault();
+            this.classList.remove("dragover");
+            const file = e.dataTransfer.files[0];
+            //file type
+            const reader = new FileReader();
+            reader.readAsDataURL(file);
+            reader.onload = function() {
+                const fileType = reader.result.split(';')[0].split('/')[1];
+                console.log('Tipo de arquivo: ' + fileType);
+            };
+            //
+            dropzone.style.display = "none";
+            if (file.type.startsWith('image/') && file.type !== "image/svg") {
+                previewImage(file);
+                const imgElement = document.createElement("img");
+                imgElement.src = URL.createObjectURL(file);
+                const imgCode = imgElement.outerHTML;
+                const imgText = imgElement.innerText;
+                console.log(imgCode);
+                console.log(imgText);
+                dropzone.value = "//"+imgElement.outerHTML;
+            } else if (file.type.startsWith('audio/')) {
+                const audio = document.getElementById("audioPreview");
+                audio.style.display = "block";
+                const source = document.createElement("source");
+                source.src = URL.createObjectURL(file);
+                source.type = file.type;
+                source.id = "sourcePreview";
+                audio.appendChild(source);
+                audio.controls = "true";
+                dropzone.value = "//"+audio.outerHTML;
+            } else if (file.type.startsWith('text/') && file.type !== "text/html") {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const conteudo = e.target.result;
+                    dropzone.value = conteudo;
+                }
+                reader.readAsText(file);
+                dropzone.style.display = "block";
+            } else if (file.type == "text/html") {
+                //reader
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const conteudo = e.target.result;
+                    dropzone.value = "//"+conteudo;
+                }
+                reader.readAsText(file);
+                dropzone.style.display = "block";
+            } else {
+                dropzone.style.display = "block";
+            }
+            dropzone.style.background = "transparent";
+        })
+    </script>
+</body>
+</html>

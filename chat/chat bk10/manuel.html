@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <script type="module" src="/node_modules/@dotlottie/player-component/dist/dotlottie-player.mjs"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manuel</title>
+    <style>
+      @font-face {
+        font-family: "Roboto";
+        src: url("RobotoMono-VariableFont_wght-1.ttf") format("truetype")
+      }
+      body {
+        background:#b15c1f;
+        color:white;
+        font-family: 'Roboto';
+      }
+      ::-webkit-scrollbar {
+        width: 5px;
+      }
+      ::-webkit-scrollbar-thumb {
+        background:#733b13;
+      }
+    </style>
+</head>
+<body>
+  <dotlottie-player
+  autoplay
+  controls
+  loop
+  mode="normal"
+  src="http://dotlottieio.s3-website-us-east-1.amazonaws.com/sample_files/animation-external-image.lottie"
+  style="width: 320px"
+>
+</dotlottie-player>
+  <a>voltar</a>
+  <h1>Manuel</h1>
+    <ul>
+        <li>Coffee</li>
+        <li>
+          <h3>Atalhos</h3>
+          <ul>
+            <li><strong>CTRL+S:</strong> abrir menu de configurações</li>
+            <li><strong>CTRL+M:</strong> abrir menu de mensagens salvas</li>
+            <li><strong>CTRL+F:</strong> pequisar mensagem em todos os grupos</li>
+          </ul>
+        </li>
+        <li>
+          <h3>outros</h3>
+        </li>
+      </ul>
+      <img src="img/manuel.svg" alt='manuel' title="manuel">
+      <script>
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            document.body.style.background = '#061614'
+        }
+      </script>
+</body>
+</html>

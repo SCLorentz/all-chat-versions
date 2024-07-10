@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link id="page-ico" rel="icon" type="image/x-icon" href="https://lh3.googleusercontent.com/fife/APg5EOba1fkxarSSy1eETjCVRUWTgLs-xzfPxbyQgkW6EKg8pQSd5Ds_JturDSyYg3_LXYjuwYr2zJGpUFVL9JyeFmSb26zhzNHZzan5aLofwDxSSoEeP0BUiI5-23QAENKcWgEpum6EDt_iZcQ2Vm8wELtb84zkn9t304Y8S9PkBTeXwhBMoewEOBm0jf29YUAMqgB0wG9_S56OAyGAr9Py9G8bdr0d5YE1WsXdQxcS_mXYD3WCEkcdGazQn7fp7fAfMPv8y4NxGiJLl8M8evxdekv4iK1xSOLy64FGa-grTrNAi27EAf5LtJFHGms_39c28Sbg7QjauD2EwebdXwHZ9v5czlCEqNmjLHxg6nTAYz5Jc4Wom-sACbOVKxdsDYxKu9kI7cdjQXbrIBL_1Dl-3ZSnuUaO7zVsZAtjy_6fgbV5qk9dj5ePtSHUyp6Vp1B4Wusyh3HiYfKWxRSrzT6_TGKWN10OciZ1LzBA13IXjT2P_qVSjLFUuqLovUK-k7Lvmcy08vqb-0HvZUJjhu94erz6O0rW91v4S4s2kdIH8GcRAK_QXXsXDfrRWgVqt6RZ9aLqTZ_mHcPa-vQ84IXTlyhpH7A-bOtsy1aDnYk_zIv-JDPHGMFJ_Z3CBm6eoN0QuuK7M0eVdQUgvt6HkPF9c1Wu8bipU-3g_91TXpYk71yzKXllZ-qJRfHMSNLQHnChukDLpa83nCLfySWQHrr-XBIY5Aw3BKpWTNdJkkfwJZILL1aSaOQ-NXpdJH4GH7jzLTIYYpY948B_MrhxwniGW2B32FIlMDfPCa32rJNzYw0DkHS_ZI7aQCPIq7gNAY97W6XDxed28l3yIFMAaV2mfn6SFI_GqaXHjio_PWLFtnYam_Tto5sVQV2NMJ8p2y9nVASUrLEvlvPhFgFIgnYpX49yHanjfXr81PLFNJLyHfgvKEmKlOz9LWI3SsDwcNySSKTlKab19JOoerN4hSGBs7ZbUs_MEvT7KSja4LkfaqI__8as-gDDU6qO6pm9o1JzkYDGMBNKLymyQCCFZt31r_KukXzIEO9vNtzQiRdrweTQOhDWkJw0Dcp4LUxsoXauLKy8UCPt7bdCQD7Uo4Ae3ygFstoSiACx0jNRmv0JQ6tifEJmXjy5PRLDAXcySAdyliZZ3nNcAB4towoCVLmEAyc8ybrCDKlp4vqeGzAyYTJHo8KKeGLVcJnRP4vmSy_pCya0tJg9eES0oL6YH_Du2axmz2Mi25D1bQbhTKfrnjB4EZ9fuHQdJrrwOpZY5lMn441xWv9FZC5cy_vR82m4TrzmquaRgmPSaJJ8gtGMbKuX1T-59ZDUi8xt_fh94k0c17sPn5ne5SB41BmEouQ9R-yuLIMVvAoWQYc16hDoBZfne5Y1kNKyOarYzRwRl5_ug6NmQeRGBfmiVWWerEG_6hsuEdu_rXpm3N-W17N7-e2otqFL1NxVvL2n70eLBQgPvieGfDPF36VHPDq6-kebZo0sojhfila4yaWt4zHItB2YHg1sird8zIjBDJHWL1i-zA=w1366-h625">
+    <!--font-->
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <!---->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cientista Aprendiz</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        * {
+            font-family: comfortaa;
+        }
+        body {
+            background: #c3c3ff;
+            margin: 0;
+        }
+        header {
+            cursor: pointer;
+            background-color: white;
+            height:80px;
+            background-image: url(cientista-pg-files/img/logo-topo.png);background-position: center;
+            background-size:contain;
+            background-repeat:no-repeat;
+        }
+        li {
+            display: flex;
+            align-items: center;
+        }
+        #menu {
+            backdrop-filter: blur(3px);
+            display: flex;
+            justify-content: center;
+            position: sticky;
+            top: 0;
+            border-top: 4px solid #01294e;
+        }
+        #menu>li {
+            background: #004b90;
+            color: white;
+            width: fit-content;
+            border-radius: 0 0 0.5rem 0.5rem;
+            padding: 5px;
+            margin: 0 3px;
+            cursor: pointer;
+            user-select: none;
+            -webkit-user-drag: none;
+            transition: all 1s ease;
+        }
+        #menu>li:hover {
+            background: #01294e;
+        }
+        article {
+            padding: 5px;
+        }
+        #article1 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 70px 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+        img {
+            user-select: none;
+        }
+        #areas {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            margin: 20px 0;
+        }
+        .areavideo {
+            display: none;
+        }
+        #selcarea>a {
+            cursor: pointer;
+            background: #004b90;
+            color: white;
+            padding: 5px;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <header id="home" onclick="page(`article1`)"></header>
+    <nav id="menu">
+        <li onclick="page(`news`)"><span class="material-symbols-outlined">newspaper</span>news</li>
+        <li onclick="page(`event`)"><span class="material-symbols-outlined">event</span>events</li>
+        <li onclick="page(`areas`)"><span class="material-symbols-outlined">science</span>areas</li>
+        <li onclick="page(`teamc`)"><span class="material-symbols-outlined">workspaces</span>team &<br>collabs</li>
+        <li onclick="page(`historia`)"><span class="material-symbols-outlined">history_edu</span>historia</li>
+        <li onclick="page(`regras`)"><span class="material-symbols-outlined">gavel</span>regras</li>
+    </nav>
+    <!--home-->
+    <article id="article1">
+        <h2 style="text-align:center;grid-area:1 / 1 / 2 / 3;">Seja bem vindo!</h2>
+        <div>
+            <iframe style="width:-webkit-fill-available;" width="560" height="315" src="https://www.youtube.com/embed/OqZyIY_yVD0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <img title="abrir moodle" style="width:150px;cursor:pointer;" src="cientista-pg-files/img/Moodle-logo.svg" onclick="link(`https://moodle.colegiodante.com.br/my/`,`_blank`)">
+        </div>
+        <a style="padding:0 10px 10px 10px;">
+            O programa "Cientista Aprendiz" é uma iniciativa de pré-iniciação científica oferecida aos alunos do 8º ano do Ensino Fundamental até a 3ª série do Ensino Médio do Colégio Dante Alighieri. O projeto foi criado em 2006 para atender ao interesse dos alunos pelas atividades de laboratório e pesquisa científica. O programa busca aprimorar a habilidade científica dos participantes e proporcionar experiências reais na área de pesquisa e desenvolvimento, incentivando a autonomia na formulação de questões e hipóteses, bem como na aplicação da metodologia científica.<br><br>
+            Os critérios para participação no programa incluem interesse e envolvimento em ciências, bom desempenho na disciplina e participação ativa nas aulas. A seleção dos participantes é feita com base na observação do desempenho dos alunos pelos professores de Ciências, que indicam os estudantes mais adequados ao perfil do programa. Como as vagas são limitadas, nem todos os interessados podem ser aceitos, priorizando-se os alunos com maior adequação ao programa.<br><br>
+            Em média, são chamados dois alunos do 8º ano e três alunos do 9º ano por sala. Os alunos que participam do programa e passam para o Ensino Médio têm prioridade no preenchimento das vagas disponíveis. O "Cientista Aprendiz" oferece uma oportunidade valiosa para os jovens desenvolverem projetos de pesquisa, estimulando o aprendizado das ciências e a aplicação de suas ferramentas.<br><br>
+            HORÁRIO DAS ATIVIDADES<br><br>
+            Os professores e alunos do Cientista Aprendiz reúnem-se semanalmente durante 1h30.<br><br>
+            Cada um dos links aqui disponibilizados oferece mais informações a respeito do Cientista Aprendiz, incluindo detalhes sobre como participar e sobre premiações recebidas por alguns dos trabalhos produzidos no Colégio.<br><br>
+            Profª. Coordª. Sandra M. Rudella Tonidandel
+        </a>
+        <p style="margin:0;display:none;" id="lastpg">ultima pagina:</p>
+    </article>
+    <!--events-->
+    <article id="event" style="display:none;">events</article>
+    <!--news-->
+    <article id="news" style="display:none;">news</article>
+    <!--areas-->
+    <article id="areas" style="display:none;">
+        <div id="selcarea">
+            <h3>areas de pesquisa</h3>
+            <a onclick="video(this)" class="abtn">Biologia</a>
+            <a onclick="video(this)" class="abtn">Física, Engenharia e suas tecnologias</a>
+            <a onclick="video(this)" class="abtn">Humanas</a>
+            <a onclick="video(this)" class="abtn">Química</a>
+            <a onclick="video(this)" class="abtn">Tecnologia é inovação</a>
+        </div>
+        <div style="border-left: 4px solid #004b90;padding: 5px;">
+            <h3 id="astv">escolha uma area para começar</h3>
+            <iframe class="areavideo" id="Tecnologia é inovação" width="560" height="315" src="https://www.youtube.com/embed/zyyuwr4eoE0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="areavideo" id="Química" width="560" height="315" src="https://www.youtube.com/embed/B88zPglVc7Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="areavideo" id="Humanas" width="560" height="315" src="https://www.youtube.com/embed/WH4P91XEs_0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="areavideo" id="Física, Engenharia e suas tecnologias" width="560" height="315" src="https://www.youtube.com/embed/SEbcZBfN5sY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe class="areavideo" id="Biologia" width="560" height="315" src="https://www.youtube.com/embed/hK3fz16ZQqI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </article>
+    <!--teamc-->
+    <article id="teamc" style="display:none;">team & collabs</article>
+    <!--historia-->
+    <article id="historia" style="display:none;">
+        <h3>Historia</h3>
+        <a style="display:flex;cursor:pointer;">
+            <!--<img style="width:20px;" src="cientista-pg-files/img/trophy-svgrepo-com.svg">
+            premios-->
+            No primeiro ano de nossa coordenação do Departamento de Ciências, tornou-se claro que o objetivo do ensino de Ciências deveria ser maior do que a aprendizagem das respectivas leis, teorias e conceitos. De fato, seria necessário o desenvolvimento, no aluno, das habilidades constitutivas da cultura científica, oferecendo-lhe um ensino que o aproximasse da prática de investigação para que, assim, viesse a estruturar, com competência, o pensamento científico: o exercício do raciocínio, a elaboração de questões, o desenvolvimento de metodologias e de testes experimentais, a análise quantitativa e qualitativa dos dados, o reconhecimento de evidências, além da interpretação e argumentação científica dos resultados obtidos.<br><br>
+            Com isso, as Feiras de Ciências de nosso Colégio começaram a refletir essas mudanças, passando de meras apresentações de maquetes — com a realização de experimentos que apenas confirmavam os resultados obtidos por outros cientistas — para a exibição de projetos que revelavam uma maior autonomia dos alunos em face da pesquisa e que lhes permitiam uma maior aproximação da cultura científica.
+        </a>
+    </article>
+    <!--regras-->
+    <article id="regras" style="display:none;">regras</article>
+    <!---->
+    <footer>
+        <span class="material-symbols-outlined" style="font-size: inherit;">mail</span>
+        E-mail:	cientistaaprendiz@cda.colegiodante.com.br<br>
+        <a style="display: flex;align-items:center;">
+            <span class="material-symbols-outlined" style="font-size: inherit;">call</span>
+            Telefone: 3179-4400 ramal 4300
+        </a>
+    </footer>
+    <script src="cientista-pg-files/js/ca.js"></script>
+</body>
+</html>

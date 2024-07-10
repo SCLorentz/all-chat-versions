@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt" style="height: 100%;">
+<head>
+    <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#152423" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <!--zip reader-->
+    <script src="js/jszip.min.js"></script>
+    <!--js dompurify-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/1.0.3/purify.min.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="titlev">Chat</title>
+    <link id="page-ico" rel="icon" type="image/x-icon" href="https://cdn-icons-png.flaticon.com/512/134/134909.png">
+    <!--my css-->
+    <link rel="stylesheet" href="css/chat.css">
+</head>
+<body>
+    <div id="createGroupSettings" style="display: none;">
+        <h2 id="createGroupSettingsName" style="margin:0;grid-area: 1 / 1 / 2 / 3;">group name</h2>
+        <div id="createGroupSettingsUsers">
+            <h4>colegas de grupo:</h4>
+            <a onclick="bOrWList(this)" id="listType">whitelist</a>
+            <div class="cGSUList">[example 1]</div>
+            <div class="cGSUList">[example 2]</div>
+            <div class="cGSUList">[example 3]</div>
+            <div class="cGSUList">[example 4]</div>
+            <div class="cGSUList">[example 5]</div>
+            <div class="cGSUList">[example 6]</div>
+            <div class="cGSUList">[example 7]</div>
+            <span class="material-symbols-outlined">more_horiz</span><!--more msg infos-->
+        </div>
+        <div id="createGroupSettingsOther">
+            tipo de grupo:
+            <a class="grouptype" id="cGSOProjetoInter"><input type="checkbox">Projeto Inter</a>
+            <a class="grouptype" id="cGSODev"><input type="checkbox">dev</a>
+        </div>
+        <div style="grid-area: 3 / 1 / 4 / 3;text-align: end;">
+            <a id="cGSEnd">
+                concluir
+            </a>
+        </div>
+    </div>
+    <div style="width:100%;position:fixed;display: flex;justify-content: center;"><a id="offline"><span class="material-symbols-outlined" translate="no">wifi_off</span></a></div>
+    <div style="width:100%;position:fixed;display: flex;justify-content: center;"><div id="popup-alert">---</div></div>
+    <header>
+        <h1 class="title"><a id="chatitle" onclick="window.open(`pages/manual.html`,`_self`)" style="cursor:pointer;;color:white;text-decoration:none;">Chat</a>
+            <span translate="no" onclick='window.open(`pages/policy.html`,`_self`)' style="margin:0 10px;cursor:pointer;" title="policy" class="material-symbols-outlined">policy</span>
+            <a onclick="window.open(`index.html`,`_self`)" id="home-b">
+                <span translate="no" class="material-symbols-outlined" title="back to home" style="font-size: larger;transition: all 1s cubic-bezier(0.25, 0.71, 0.92, 0.12)">home</span>
+            </a>
+            <span style="rotate:0deg;" id="configinbutton" translate="no" onmouseenter="configsmover(this)" onclick="openconfigs(this)" class="material-symbols-outlined">settings</span>
+        </h1>
+        <div id="configuraçõesp" style="display:none;">
+            <h1 style="display:flex;">
+                <span onmouseenter="reportool(this, event)" onclick="reportEvent()" style="font-size:inherit;cursor:pointer;" class="material-symbols-outlined">
+                    report
+                </span>
+                <p id="reportooltip">report</p>
+                Configurações:
+            </h1>
+            <span class="material-symbols-outlined" id="configscl" style="position:fixed;left:calc(100% - 35px);cursor:pointer;z-index: 100;">close</span>
+            <div id='carteirinhaDigital'>
+                <img src="img/carteirinha Dante digital.svg" id="carteirinhaCanvas">
+                <span class="material-symbols-outlined" id="accountInfo">badge</span>
+            </div>
+            <div id="computer-info" style="width:fit-content;display:flex;align-items:stretch;flex-direction:column;flex-wrap:wrap;">
+                <h3>relacionadas ao <i>computador</i></h3>
+                <div id="ramconfig" class="computerinf" title="ram">
+                    <span class="material-symbols-outlined">memory</span>
+                    <a id="ram-display">[error]</a>
+                </div>
+                <div class="computerinf" id="internetconfig">
+                    <span class="material-symbols-outlined">wifi</span>
+                    <a id="internet-display">[error]</a>
+                </div>
+                <div title="battery" class="computerinf">
+                    <span class="material-symbols-outlined" id="battery-ico-display">battery_full</span>
+                    <a id="battery-display">[error]</a>
+                </div>
+                <br>
+            </div>
+            <div id="page-theme">
+                <h3 style="display:flex;align-items:center;"><span class="material-symbols-outlined">web</span>temas</h3>
+                <li id="tema-claro"><img src="img/white theme.svg" style="width: 300px;"></li>
+                <li id="tema-escuro"><img src="img/dark-theme.svg" style="width: 300px;"></li>
+                <li title="padrão do dispositivo" id="get-theme-title">[error]</li>
+                <li id="tema-custom">custom<span style="font-size:inherit;" class="material-symbols-outlined">temp_preferences_custom</span></li>
+            </div>
+            <a style="grid-area: 3 / 2 / 4 / 3;">tamanho da fonte</a>
+        </div>
+    </header>
+    <div id="cont" class="cont" style="overflow: auto;display: flex;flex-direction: column;">
+        <div id="tools" translate="no">
+            <a id="new-group" title="create new group" onclick="createagroup()">
+                <span class="material-symbols-outlined">group_add</span>
+            </a>
+            <a id="add-person" title="adicionar novo contato" onclick="addperson()">
+                <span class="material-symbols-outlined">person_add</span>
+            </a>
+            <input id="pesquisa" type="search" placeholder="pesquisar grupos/contatos">
+        </div>
+        <!--devs-->
+        <a href="#headmaster" translate="no" title="desenvolvedor chefe" style="transition: all 0.3s cubic-bezier(0.8, 0.26, 0.07, 0.72) 0s;">
+            <img src="img/headmaster.webp" style="height: 50px;margin: 0 10px 0 0;border-radius: 0.5rem;image-rendering: pixelated;" class="thumb-img">
+            headmaster
+        </a>
+        <!--end-->
+    </div>
+    <div id="customContextMenu" oncontextmenu="event.preventDefault()">
+        <ul>
+            <p style="border-bottom: 1px solid;margin:0;">formatação</p>
+            <li><a onclick="italic()">italico</a></li>
+            <li><a onclick="negrito()">negrito</a></li>
+            <li><a onclick="intext()">Opção 3</a></li>
+        </ul>
+    </div>
+    <!--Img Info Menu-->
+    <div id='imgMenu' style='display:none;position: fixed;z-index: 1;' oncontextmenu="event.preventDefault()">
+        <a id="imageName">[error]</a>
+        <a id="imageDownload">download<span style="font-size: inherit;" class="material-symbols-outlined">download</span></a>
+    </div>
+    <!---->
+    <div class="msg" id="msg">
+        <div class="msgbox" style="display: none;height: 400px;flex-direction: column;overflow: auto;">
+            <!--copy svg-->
+            <a><div id="copy"><svg viewBox="0 0 8 13" height="13" width="8" preserveAspectRatio="xMidYMid meet"  version="1.1" x="0px" y="0px" enable-background="new 0 0 8 13" xml:space="preserve"><path opacity="0.13" fill="#0000000" d="M1.533,3.568L8,12.193V1H2.812 C1.042,1,0.474,2.156,1.533,3.568z"></path><path fill="currentColor" d="M1.533,2.568L8,11.193V0L2.812,0C1.042,0,0.474,1.156,1.533,2.568z"></path></svg></div><a>mande uma mensagem!</a></a>
+           <!--end of copy-->
+        </div>
+        <div class="baloon" id="balloon">
+            <img id="filedownloadimg" src="img/filedownload.svg" style="position: fixed;display:none;height: 80px;user-select: none;-webkit-user-drag: none;">
+            <audio controls id="audioPreview" style="display: none;">
+                <source id="audioPreviewS">
+            </audio>
+            <div id="imgEditor" style="display: none;">
+                <!--images here-->
+            </div>
+            <video style="display: none;" id="videoPreview" width="320" height="240" controls>
+                <source id="videoPreviewS">
+            </video>
+            <textarea oncontextmenu="showContextMenu(event)" type="text" placeholder="vontade de falar..." id="ur-msg" required title="" ondragover="dragover()" ondragleave="dragleave()"></textarea>
+            <input type="color" value="#ffffff" id="color" style="grid-area: 2 / 3 / 3 / 2;cursor:pointer;border: 0;padding: 0;background: transparent;width: 40px;height: 25px;" title="pick a color">
+            <div id="msg-env" onclick="send()"><span class="material-symbols-outlined" translate="no" style="user-select: none;">send</span></div>
+        </div>
+        <!--<div style="height: 0px;margin: 0 0 0 auto;">
+            <span onclick='alert("preguça")' class="material-symbols-outlined" style="user-select:none;/*top:80%;left: 96%*/;background:#a6561d;box-shadow:4px 4px 6px #00000070;border-radius:0.5rem;position:fixed;z-index:1;cursor:pointer;height:30px;width:30px;display:flex;justify-content:center;align-items: center;">
+                keyboard_double_arrow_down
+            </span>
+        </div>-->
+    </div>
+    <script src="js/chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ㅤ</title>
+    <link rel="icon" type="image/x-icon" href="files/imagens/Perfil.png">
+    <style>
+      html {
+        scroll-behavior: smooth;
+        height: 100%;
+      }
+
+        body {
+          font-family: Arial;
+          background-color: #bebebe;
+          height: -webkit-fill-available;
+          margin: 0px ;
+          margin-top: 5px;
+        }
+        /*fonts*/
+            @import url('https://fonts.googleapis.com/css2? family= Comfortaa:wght@500 & display=swap');
+            *{
+            font-family:comfortaa;
+            transition: all 0.8s ease;
+            overflow-x: hidden;
+            }
+        
+        /* Style the tab */
+        .tab {
+          border: 0px solid #ccc;
+          border-top-right-radius:5px;
+          background-color: transparent;
+        }
+        
+        /* Style the buttons inside the tab */
+        .tab button {
+          background-color: inherit;
+          float: left;
+          border: none;
+          outline: none;
+          cursor: pointer;
+          padding: 14px 16px;
+          transition: 0.3s;
+          font-size: 17px;
+        }
+        
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+          background-color: #adacac;
+          border-top-right-radius: 15px;
+          border-top-left-radius: 15px;
+        }
+        
+        /* Create an active/current tablink class */
+        .tab button.active {
+          background-color: #ddd;
+        }
+
+        .tab button {
+          background-color: rgb(161, 160, 160);
+          border-top-left-radius: 0.5rem;
+          border-top-right-radius: 0.5rem;
+          user-select: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          align-content: center;
+          flex-wrap: wrap;
+        }
+        
+        /* Style the tab content */
+        .tabcontent {
+          display: none;
+          padding: 6px 12px;
+          border-top: none;
+          background-color: #ddd;
+          height:-webkit-fill-available;
+          width: 98% !important;
+          border-radius: 0.5rem;
+        }
+
+        img {
+            -webkit-user-drag: none;
+            -webkit-user-select: none;
+        }
+
+        /*scrollbar*/
+        ::-webkit-scrollbar {
+          width: 10px;
+          height: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+          background: transparent;
+        }
+        
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+          background:#514c53 ;
+          border-radius:0px;
+        }
+
+        /*corner*/
+        ::-webkit-scrollbar-corner {
+          background-color: #514c53;
+        }
+
+        @media only screen and (max-width: 500px)  {
+          #Cien {
+          height: 1000px;
+        }
+        }
+
+        @media only screen and (max-width: 351px) {
+          .tab button {
+            width: 25.675%;
+          }
+          #Cien {
+            height: 1500px;
+          }
+
+          body > div.tab > button:nth-child(1) {
+            display: none;
+          }
+        }
+
+        .material-symbols-outlined {
+          overflow: unset;
+        }
+
+        div#homepage {
+          display: flex;
+          background: rgb(161, 160, 160);
+          border-radius: 0.5rem;
+          padding: 10px;
+          height: 530px;
+          align-items: center;
+        }
+
+        div.news-left {
+          width: 50%;
+          height: 90%;
+          padding: 5px;
+          margin-left: 10px;
+          border-radius: 0.2rem;
+          background: #818181;
+          color: white;
+        }
+        div.news-left> .news {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          background-color: dimgray;
+          padding: 5px;
+          border-radius: 0.2rem;
+          border-bottom: 2px solid darkgray;
+        }
+      
+
+    </style>
+</head>
+<body>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <div class="tab" style="transition: all 0.8s ease;">
+        <button class="tablinks" style="background-color:transparent !important;">🛆</button>
+        <button class="tablinks" onclick="openCity(event, 'Cien')" title="files"><span class="material-symbols-outlined" style="color: #8f1a1a;">home_storage</span></button>
+        <button class="tablinks" onclick="openCity(event, 'Sala')" title="groups"><span class="material-symbols-outlined" style="color: #313185;">groups</span></button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')" title="galery"><span class="material-symbols-outlined" style="color: #007800;">gallery_thumbnail</span></button>
+        <img src="files/imagens/Perfil.png" style="width:40px;height: 40px;float: right;display: none;" id="profileImage">
+    </div>
+      
+      <div id="Cien" class="tabcontent" style="width:100%;height: 1000px;;overflow: unset;background-image: url(https://img.freepik.com/premium-vector/hand-drawn-seamless-pattern-with-big-city-new-york-vintage-illustration-with-nyc-architecture-skyscrapers-megapolis-buildings-downtown_88734-19.jpg);background-size: 500px;border-top: 2px solid #ddd;">
+        <object width="100%" height="90%" data="files/backup.html" style="width: 100%;height: -webkit-fill-available;"></object>
+      </div>
+
+      <div id="Sala" class="tabcontent">
+        <h3>Alunos</h3>
+        <p>(import lista) ->javascript</p> 
+      </div>
+      
+      <div id="Tokyo" class="tabcontent" style="width:100%;background-image: url(https://static.vecteezy.com/system/resources/previews/005/609/025/non_2x/hand-drawn-jungle-exotic-leaves-seamless-pattern-design-tropical-leaf-wallpaper-creative-botanical-vector.jpg);background-size: 80%;">
+        <object width="100%" height="90%" data="files/galeria.html" style="padding-top:6px;height: calc(100% - 10px);"></object>
+        <p style="display: none;">text</p>
+      </div>
+
+      <div id="homepage" class="tabcontent">
+      <div class="news-left">
+        <h2 style="margin: 10px;">Some news:</h2>
+        <div class="news" id="1" style="display: flex;flex-direction: row;align-items: center;">
+          <div id="user-info" style="display: flex;flex-direction: column;align-items:center;width: fit-content;padding-right: 5px;border-right: solid 3px;">
+            <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" style="height: 50px;height: 50px;border: solid white;border-radius: 50%;">
+            <p id="username" style="margin-top: 5px;">[username]</p>
+          </div>
+          <div id="content" style="margin-left: 5px;color: lightgray;">
+            <p>follow you</p>
+            <p><span class="material-symbols-outlined" style="font-size: inherit;">comment</span>send a message</p>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!--f-->
+    <script>
+        function openCity(evt, Name) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(Name).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+
+        </script>
+</body>
+</html>

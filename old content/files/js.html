@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>info:</h3>
+    <p id="screen">---</p>
+    <p id="date">clock</p>
+    <p id="window">---</p>
+    <p id="platform">---</p>
+    <p id="linguage">---</p>
+    <p id="online"></p>
+    <p id="nav"></p>
+    <button onclick="location.reload();">reload the page</button>
+    <p></p>
+    <script>
+        setInterval(myFunction, 1000);
+        function myFunction() {
+            const d = new Date();
+            document.getElementById("date").innerHTML =  "clock: " + d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+            document.getElementById("online").innerHTML ="online: " + navigator.onLine;
+        }
+        document.getElementById("screen").innerHTML ="height:" + screen.width + " width:" + screen.width;
+        document.getElementById("window").innerHTML = window.location.pathname;
+        document.getElementById("platform").innerHTML ="your app is for: " + navigator.platform;
+        document.getElementById("linguage").innerHTML ="your liguage is set into: " + navigator.language;
+        document.getElementById("nav").innerHTML = host;
+    </script>
+</body>
+</html>

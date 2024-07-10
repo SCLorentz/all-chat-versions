@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My account | backup page</title>
+    <link id="page-ico" rel="icon" type="image/x-icon" href="https://cdn.pixabay.com/photo/2016/09/28/02/14/user-1699635__340.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        html {
+            height: 100%;
+        }
+        body {
+            display: flex;
+            align-items: flex-start;
+            font-family: comfortaa;
+            background-color: gray;
+            height: 98.79%;
+        }
+        :root {
+            --font-color:white;
+            --transparent_background:#0000003d;
+            --darkbackground:#363636;
+            --background:dimgray;
+            --lightbackground:#919191;
+        }
+        ::selection {
+            color: var(--font-color);
+            background: var(--darkbackground);
+        }
+        #info { 
+            clear:none;
+            color: var(--font-color);
+            justify-content: flex-end;
+        }
+        .flip-card {
+            height: 300px;
+            perspective: 1000px;
+            backdrop-filter: blur(1px);
+            background-color: #545454;
+            padding: 10px;
+            border-radius: 0.2rem;
+            cursor: pointer;
+        }
+
+        .flip-card-inner {
+            border-radius: 0.5rem;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        }
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .flip-card-front, .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+            border-radius: 0.5rem;
+            background-color: var(--background);
+        }
+
+        .flip-card-front {
+            color: black;
+        }
+
+        .flip-card-back {
+            color: var(--font-color);
+            transform: rotateY(180deg);
+        }
+        .user-image {
+            background-color: var(--background);
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size:contain;
+            
+        }
+        .user-image#padrão {
+            background-blend-mode:revert;
+            background-image:url(https://cdn.pixabay.com/photo/2016/09/28/02/14/user-1699635__340.png);
+        }
+        .user-info {
+            width: fit-content;
+            height: fit-content;
+            padding:15px;
+            margin:0 5px 0 0;
+            background-color:dimgray;
+            color: var(--font-color);
+            border-radius: 0.2rem;
+        }
+        .user-info > a {
+            margin: 5px 0 5px 0;
+        }
+
+        .user-info>a>span.material-symbols-outlined:hover {
+            color: #f8e23e;
+            cursor: pointer;
+        }
+
+        .menu {
+            position: relative;
+            background: var(--background);
+            padding: 15px;
+            height: 280px;
+            width: fit-content;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-radius: 0.5rem;
+            margin-right: 10px;
+            color: var(--font-color);
+            user-select: none;
+            box-shadow: rgb(0 0 0 / 61%) 2px 2px 4px inset;
+        }
+        .menu > a > span:hover {
+            color: var(--font-color) !important;
+        }
+
+        .menu > a {
+            color: var(--font-color);
+            text-decoration: none;
+            transition: all 1s ease;
+            margin: 0px;
+        }
+        
+        #closemenu {
+            transition: all 1s ease;
+            padding: 5px;
+            border-bottom: solid 2px white;
+        }
+        #closemenu:hover {
+            color: #ff3434;
+        }
+        .chat-button:hover {
+            background-color: var(--lightbackground);
+            cursor: pointer;
+            
+        }
+        .chat-button {
+            font-size: 20px;
+            padding: 5px;
+            border-radius: 0.2rem;
+            margin: 0px;
+            color: var(--font-color);
+            text-decoration: none;
+            transition: all 1s ease;
+        }
+
+        /* Style the tab */
+        .tab {
+            float: left;
+            background-color: #f1f1f1;
+            width: 100px;
+            height: 95%;
+            border-radius: 0.5rem 0 0 0.5rem;
+            user-select: none;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            display: block;
+            background-color: inherit;
+            color: black;
+            padding: 22px 16px;
+            width: 100%;
+            outline: none;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 17px;
+            border: none;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            background: #ccc;
+            justify-content: center;
+            padding: 10px;
+            border: none;
+            border-radius: 0 0.5rem 0.5rem 0;
+            width: calc(100% - 20px);
+            height: calc(95% - 20px);
+        }
+
+        .new-password {
+            background: var(--lightbackground);
+            color: var(--font-color);
+            border-radius: 0.5rem;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: fit-content;
+        }
+        .input {
+            border-radius: 0.2rem;
+            padding: 5px;
+            margin: 2px;
+            height: 20px;
+            width: 200px;
+            display: flex;
+            align-items: center;
+            color: black;
+        }
+        .input:focus-visible {
+            outline: 0px;
+        }
+        #eye {
+            cursor: pointer;
+            color:#ad1212;
+            user-select: none;
+        }
+        #login-btn {
+            cursor: pointer;
+            background: #ad1212;
+            padding: 5px;
+            margin-top: 5px;
+            border-radius: 0.2rem;
+            width: -webkit-fill-available;
+            text-align: center;
+        }
+        #login-btn:hover {
+            box-shadow: inset 100px 100px 100px 100px #0000004a;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="menu" id="menu">
+        <span class="material-symbols-outlined" onclick="closemenu()" id="closemenu">close</span>
+        <a class="chat-button" href="chat.html" title="chat">
+            <span class="material-symbols-outlined" style="height: fit-content;">chat</span>
+        </a>
+        <a class="chat-button" href="backup-page1.html" title="home">
+            <span class="material-symbols-outlined">home</span>
+        </a>
+        <a class="chat-button" href="login.html" title="logout">
+            <span class="material-symbols-outlined">logout</span>
+        </a>
+        <a class="chat-button" href="" title="config">
+        </a>
+    </div>
+    <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'info')" id="defaultOpen" style="border-radius: 0.5rem 0rem 0rem 0rem;" title="my account"><span class="material-symbols-outlined">person</span></button>
+        <button class="tablinks" onclick="openCity(event, 'Paris')" title="personal info"><span class="material-symbols-outlined">lock</span></button>
+        <button class="tablinks" onclick="openCity(event, 'saves')" title="my files"><span class="material-symbols-outlined">home_storage</span></button>
+        <button class="tablinks" title="config"><span id="config-button" class="material-symbols-outlined">settings</span></button>
+    </div>
+
+    <div id="info" class="tabcontent">
+            <div class="user-info">
+                <h1 style="margin: 0px;font-size: 30px;" title="[nome completo]">[username]</h1>
+                <a id="email" style="display:flex;align-items: center;color: white;">nome.sobrenome</a> 
+                <script>
+                    email = document.getElementById("email").textContent
+                    document.getElementById("email").href ="mailto:" + email + "@colegiodante.org"
+                    document.getElementById("email").title =email + "@colegiodante.org"
+                </script>
+            </div>
+            <div class="user-painel" style="width:300px;height:fit-content;">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <div class="user-image" id="padrão" alt="Avatar" style="border-radius: 0.5rem;width:100%;height:300px;"></div>
+                    </div>
+                    <div class="flip-card-back">
+                        <h1>[nome]</h1> 
+                        <a id="classe">[classe]</a>
+                        <div style="height: 172px;background: var(--lightbackground);padding: 10px;margin: 5px;border-radius: 0.5rem;">
+                            [description]
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div id="Paris" class="tabcontent">
+            <div class="new-password">
+                <h1 style="cursor:default;display:flex;margin:0 0 5px;"><span class="material-symbols-outlined" style="font-size: 1em;">lock</span>mudar senha</h1>
+                <div style="width:-webkit-fill-available;display:flex;background:lightgray;padding:5px;border-radius:0.2rem;align-items: center;">
+                    <div>
+                        <input type="password" class="input" id="password-inp" placeholder="password">
+                        <input type="password" class="input" id="password" placeholder="confirm password">
+                    </div>
+                    <p id="checkbox" onclick="show()"><span id="eye" class="material-symbols-outlined">visibility_off</span></p>
+                </div>
+                    <a id="login-btn">alterar</a>
+            </div>
+    </div>
+
+    <div id="saves" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+    </div>
+    <script>
+        function menu() {
+                document.getElementById("menu").style.display = "flex";
+            }
+        function closemenu() {
+            document.getElementById("menu").style.display = "none";
+        }
+        //tabs
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "flex";
+            evt.currentTarget.className += " active";
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+
+
+        //
+        function show() {
+                    var x = document.getElementById("password");
+                    var z = document.getElementById("password-inp");
+                    var y = document.getElementById("eye");
+                    
+                    if (x.type === "password") {
+                        x.type = "text";
+                        z.type = "text";
+                        y.innerHTML = "visibility";
+                        y.style.color = "black";
+                    } else {
+                        x.type = "password";
+                        z.type = "password";
+                        y.innerHTML = "visibility_off";
+                        y.style.color = "#ad1212";
+                    }
+                }
+
+    </script>
+</body>
+</html>

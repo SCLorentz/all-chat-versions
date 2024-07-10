@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <style>
+        body, html {
+            width: -webkit-fill-available;
+            height: -webkit-fill-available;
+            margin: 0;
+        }
+        .thumb {
+            background: #d5a10f;
+            color: white;
+            border-radius: 0.5rem;
+            padding: 5px;
+        }
+        #terminal {
+            width: -webkit-fill-available;
+            height: -webkit-fill-available;
+            background: black;
+            padding: 5px;
+            color: greenyellow;
+        }
+        #type {
+            outline: none;
+            width: 100%;
+            height: fit-content;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div id="terminal">
+        hello world<br>
+        <div style="display: flex;" id="input">
+            <span>></span>
+            <a contenteditable="true" id="type"></a>
+        </div>
+    </div>
+    <script>
+        const chat = document.getElementById('terminal');
+        document.body.appendChild(chat);
+        document.body.onclick = () => {
+            document.getElementById('type').focus();
+        }
+        let inputs = [];
+        document.getElementById('type').onkeydown = (event) => {
+            if(event.key == 'Enter') {
+                event.preventDefault();
+                inputs.push(new Text(document.getElementById('type').innerText));
+                chat.appendChild(inputs[1]);
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="div4" style="height: fit-content;background: var(--darkbackground);margin-top: 10px;padding: 10px;border-radius: 0.5rem;">
+        <h1 id="date" style="text-align: center;font-weight: 100;color:var(--font-color)">loading...</h1>
+        <script>
+            setInterval(myFunction, 1000);
+            function myFunction() {
+                const d = new Date();
+                document.getElementById("date").innerHTML =d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+            }
+        </script>
+    </div>
+</body>
+</html>

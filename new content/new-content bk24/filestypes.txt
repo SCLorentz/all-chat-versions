@@ -1,0 +1,22 @@
+alguns nomes de arquivos que tem um preview (envio de arquivos):
+    .txt
+    .json
+    .png
+    .svg
+    .html
+    .webp
+    .mp3
+    [...]
+tipos de arquivos que possuem um preview:
+    img
+    audio
+    txt
+ideias para futuros nomes de arquivos:
+    .hex
+    .jem
+    folder
+    .zip
+    .mp4
+    .webm
+    (conexão com drive)
+    [...]

@@ -1,0 +1,14 @@
+25/4/23 - 17:56 --> audio: os audios estão com um bug no envio. O "audioPreview" não atualiza o src, 
+e só toca o primeiro audio arrastado. Nos 2 primeiros envios, o balão de mensagem de audio funciona
+certo. Já nos outros balões, apos este limite. O audio sempre será o mesmo no qual o audio n°2.
+ex: 
+audio 1- error.mp3 -resultado (textarea): audio error.mp3 - resultado (msg final): audio error.mp3
+audio 2- rickA.mp3 - resultado (textarea): audio error.mp3 (1° env) - resultado (msg final): audio rickA.mp3
+audio >3 - outro.mp3 - resultado (textarea): audio error.mp3 - resultado (msg final): audio rickA.mp3 (2° env)
+
+
+1/5/23 - 9:23 --> (não é um bug exatamente): Arquivos SVG são enviados como img, e não como svg no html.
+talvez uma priorização de arquivos SVG e WEPB a outros como PNG ou JPG;
+
+4/5/23 - 15:29 --> Por algum motivo, o arquivo "chat.html" aparece como criado em "1/5/23". Acontece, é claro,
+que o arquivo foi criado cerca de 1 mes atras.

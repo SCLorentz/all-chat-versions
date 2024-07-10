@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+        #customContextMenu {
+          position: absolute;
+          display: none;
+          z-index: 1;
+          background-color: #fff;
+          border: 1px solid #ccc;
+          padding: 5px;
+          box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        #customContextMenu ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+        }
+        #customContextMenu li {
+          padding: 5px;
+        }
+        #customContextMenu a {
+          text-decoration: none;
+          color: #333;
+        }
+    </style>
+</head>
+<body>
+    <a id="btnRequestUSB">btnRequestUSB</a>
+    <a id="btnRequestBluetooth">btnRequestUSB</a>
+    <span class="material-symbols-outlined" id="batterydisplay">battery_full</span><br>
+    <a contenteditable="false" oncontextmenu="showContextMenu(event)"  id="meuTexto">bruh lucas html js batata</a>
+    <p style="background: #c3c3c3;padding: 15px;text-align: center;font-family: system-ui;">Clique com o botão direito aqui</p>
+
+<div id="customContextMenu">
+  <ul>
+    <li><a href="#">Opção 1</a></li>
+    <li><a href="#">Opção 2</a></li>
+    <li><a href="#" onclick="negrito()">Opção 3</a></li>
+  </ul>
+</div>
+<video id="video" width="640" height="480" autoplay></video>
+<script>
+  const video = document.getElementById('video');
+  navigator.mediaDevices.getUserMedia({ video: true })
+    .then(stream => {
+      video.srcObject = stream;
+    })
+    .catch(error => {
+      console.error('Error accessing the camera: ', error);
+    });
+    //audio
+    navigator.mediaDevices.getUserMedia({ audio: true })
+    .then(stream => {
+      // Sucesso: stream contém a transmissão de áudio do microfone
+      const audioContext = new AudioContext();
+      const source = audioContext.createMediaStreamSource(stream);
+      // Faça algo com o fluxo de áudio, como processamento ou gravação
+    })
+    .catch(error => {
+      // Erro: não foi possível acessar o microfone
+      console.error('Erro ao acessar o microfone: ', error);
+    });
+    //battery
+    if ('getBattery' in navigator) {
+      navigator.getBattery().then(function(battery) {
+        // Nível da bateria (entre 0 e 1)
+        var level = battery.level;
+        // Status de carregamento (carregando ou não)
+        var charging = battery.charging;
+        // Tempo restante de carga estimado (em segundos)
+        var chargingTime = battery.chargingTime;
+        // Tempo restante de descarga estimado (em segundos)
+        var dischargingTime = battery.dischargingTime;
+        // Faça algo com os valores obtidos
+        console.log('Nível da bateria:', level);
+        console.log('Carregando:', charging);
+        console.log('Tempo restante de carga:', chargingTime);
+        console.log('Tempo restante de descarga:', dischargingTime);
+      });
+    } else {
+      // API Battery Status não é suportada
+      console.log('A API Battery Status não é suportada neste navegador.');
+    }
+    //get battery icon from google fonts
+    // Verificar se a API de Conexão de Rede é suportada pelo navegador
+    if ('connection' in navigator) {
+      // Acessar a propriedade de conexão da API
+      const connection = navigator.connection;
+      // Verificar o tipo de conexão de rede
+      // (possíveis valores: 'slow-2g', '2g', '3g', '4g', ou 'unknown')
+      const connectionType = connection.effectiveType;
+      // Verificar a velocidade de download em megabits por segundo (Mbps)
+      const downloadSpeed = connection.downlink;
+      // Tomar decisões com base na velocidade de download ou tipo de conexão
+      if (connectionType === '4g' && downloadSpeed > 5) {
+        console.log('4g detectado');
+      } else if (connectionType === '3g' && downloadSpeed > 2) {
+        console.log('3g detectado');
+      } else {
+        console.log('2g detectado');
+      }
+    } else {
+      console.log('A API de rede não é suportada em seu navegador');
+    }
+    //ram
+    if ('deviceMemory' in navigator) {
+      const ramAmount = navigator.deviceMemory;
+      console.log('Quantidade de RAM:', ramAmount + 'GB');
+    } else {
+      console.log('Não é possível determinar a quantidade de RAM disponível.');
+    }
+    //USB
+    document.getElementById('btnRequestUSB').addEventListener('click', function() {
+      navigator.usb.requestDevice({ filters: [] })
+        .then(device => {
+          // Acesso ao dispositivo USB concedido
+          console.log('Nome do dispositivo:', device.productName);
+          console.log('ID do fabricante:', device.manufacturerId);
+          console.log('ID do produto:', device.productId);
+          // Outras propriedades e métodos disponíveis para o dispositivo
+        })
+        .catch(error => {
+          console.error('Erro ao interagir com o dispositivo USB: ', error);
+        });
+    })
+    //Bluetooth
+    document.getElementById('btnRequestBluetooth').addEventListener('click', function() {
+      navigator.bluetooth.requestDevice({ filters: [{ services: ['battery_service'] }] })
+      .then(device => {
+        console.log('Dispositivo Bluetooth encontrado:', device.name);
+      })
+      .catch(error => {
+        console.error('Erro ao escanear dispositivos Bluetooth:', error);
+      })
+    })
+    //notificações
+    if ('Notification' in window) {
+      Notification.requestPermission()
+        .then(permission => {
+          if (permission === 'granted') {
+            console.log('granted');
+          } else if (permission === 'denied') {
+            console.log('denied');
+          }
+        })
+        .catch(error => {
+          console.error('Erro ao solicitar permissão de notificação: ', error);
+        });
+    }
+    //janelas
+    // Solicitar a permissão de gerenciamento de janelas
+    const handleWindowPermission = async () => {
+      try {
+        await window.navigator.permissions.request({ name: 'window', allowWindowControl: true });
+        console.log('Permissão de gerenciamento de janelas concedida!');
+      } catch (error) {
+        console.error('Erro ao solicitar a permissão de gerenciamento de janelas:', error);
+      }
+    };
+    // Abrir uma nova janela do navegador
+    const openNewWindow = () => {
+      //const tab = window.open('https://www.minecraft.net', '_blank');
+    };
+    // Exemplo de uso
+    handleWindowPermission();
+    openNewWindow();
+
+    const userAgent = navigator.userAgent;
+    const osInfo = {
+      isWindows: userAgent.includes("Windows"),
+      isMacOS: userAgent.includes("Macintosh"),
+      isLinux: userAgent.includes("Linux"),
+    };
+    console.log(osInfo);
+</script>
+    <script>
+        function showContextMenu(event) {
+          textElement.contentEditable = false;
+          event.preventDefault();
+          // Obter as coordenadas do clique do botão direito
+          const x = event.clientX;
+          const y = event.clientY;
+          // Obter o elemento de menu personalizado
+          const customContextMenu = document.getElementById('customContextMenu');
+          // Posicionar o elemento de menu personalizado no local do clique do botão direito
+          customContextMenu.style.display = 'block';
+          customContextMenu.style.left = x + 'px';
+          customContextMenu.style.top = y + 'px';
+        }
+
+// Ocultar o menu personalizado quando clicado em qualquer lugar da página
+document.addEventListener('click', function() {
+  const customContextMenu = document.getElementById('customContextMenu');
+  customContextMenu.style.display = 'none';
+});
+
+// Seu elemento de texto
+const textElement = document.getElementById('meuTexto');
+
+// Adiciona um evento de clique ao elemento de texto
+function negrito() {
+  const selection = window.getSelection().toString();
+  if (selection !== '') {
+    console.log("link detectado:",selection);
+    const formattedText = `<strong>${selection}</strong>`;
+    const subaform = textElement.innerHTML.replace(selection, formattedText);
+    textElement.innerHTML = subaform;
+  }
+};
+
+
+
+//verbo - ultima letra --> verificação de verbo
+const verbosterm = {
+    ptbr: {
+        regulares: {
+            presenteind: {
+                ar: {
+                    EU: "o",
+                    VOCE: {
+                        formal: "as",
+                        informal: "a"
+                    },
+                    ELELA: "a",
+                    NOS: "amos",
+                    VOCES: "am",
+                    ELESELAS: "am"
+                },
+                er: {
+                    EU: "i",
+                    VOCE: "eu",
+                    ELELA: "eu",
+                    NOS: "emos",
+                    VOCES: "eram",
+                    ELESELAS: "eram"
+                },
+                ir: {
+                    EU: "o",
+                    VOCE: {
+                        formal:"es",
+                        informal:"e"
+                    },
+                    ELELA: "e",
+                    NOS: "imos",
+                    VOCES: "em",
+                    ELESELAS: "em"
+                }
+            }
+        }
+    }
+}
+console.log(verbosterm);
+cnverb("comer", "ptbr", "reg", "presenteind", "er", "eu")
+function cnverb(palavra, lingua, reg, tempo, terminação, nterminação) {
+    const pst = palavra.slice(0, palavra.length - 2)
+    const pnt = pst+verbosterm[lingua][reg][tempo][terminação][nterminação]
+    console.log(pnt)
+}
+    </script>
+</body>
+</html>

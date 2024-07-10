@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.1/socket.io.js"></script>
+    <!--desc-->
+    <meta name="description" content="Home Dante Chat">
+    <!---->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--name & ico-->
+    <link id="page-ico" rel="icon" type="image/x-icon" href="/img/manuel.svg">
+    <!--temporariamente usando daniel como favicon, não consigo definir a imagem de icon-->
+    <title>CDA Chat</title>
+    <!--my css-->
+    <link rel="stylesheet" href="/page.css">
+</head>
+
+<body translate="no">
+    <!--nav-->
+    <nav id="salvos">
+        <div id="menu">
+            <!--<textarea id='pesquisar' placeholder="pesquisar" tabindex="0"></textarea>-->
+            <span class="material-symbols-outlined"
+                style="background: white;color: black;mix-blend-mode: screen;padding: 5px;border-radius: 0.3rem 0 0 0.3rem;margin: 0 0 0 5px;border-right: 2px black solid;">travel_explore</span>
+            <span class="material-symbols-outlined" id="add">add</span>
+            <div id="homeSettings">
+                <button class="material-symbols-outlined" tabindex="0" id='settings'>settings</button>
+                <a class="material-symbols-outlined" tabindex="0" id="home"
+                    href="https://homedante.colegiodante.com.br/" style="text-decoration: none;">home</a>
+            </div>
+        </div>
+        <div id="contatos"></div>
+    </nav>
+    <!--New Group Menu-->
+    <div id="newGroupCreator">
+        <h2 class='newGroupCreatorTitle'>Novo Grupo</h2>
+        <span class="material-symbols-outlined exitCreateGroupMenu" tabindex="0"
+            onclick="this.parentNode.style.display = 'none'">close</span>
+        <div id="menuInputs">
+            <div style='display: flex;flex-direction: column;width: 100%;justify-content: center;'>
+                <input type="text" id="nameInput" placeholder="Escolha um Nome">
+                <input type="text" placeholder="description" id="descriptionInput">
+            </div>
+            <button tabindex="0" onclick="this.lastElementChild.click()">
+                <img src="/img/newGroupImg.svg">
+                <input type="file" style='display: none;'>
+            </button>
+        </div>
+        <button class='material-symbols-outlined' id="createChatBtn">group_add</button>
+        <div id="selecUsers">
+            <h3 style="margin-top: 0;">users</h3>
+        </div>
+    </div>
+    <!--settings-->
+    <div id='settingsMenu'>
+        <span id='closeSettings' class="material-symbols-outlined" tabindex="0">close</span>
+        <a href="/manuel.html">manuel</a>
+    </div>
+    <script type="module" src="/script.js"></script>
+</body>
+
+</html>

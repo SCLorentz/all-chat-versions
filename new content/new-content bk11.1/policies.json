@@ -1,0 +1,1284 @@
+{
+   "chromeMetadata": {
+      "application": "Google Chrome",
+      "platform": "15359.58.0 (Official Build) stable-channel octopus",
+      "revision": "60127beb442528082b3f6eff7392267e145262c3-refs/branch-heads/5615@{#1268}",
+      "version": "112.0.5615.134 (Versão oficial) 64 bits"
+   },
+   "chromePolicies": {
+      "AccessibilityShortcutsEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "AllowDeletingBrowserHistory": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "AllowDinosaurEasterEgg": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "AllowKioskAppControlChromeVersion": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "AllowedDomainsForApps": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": "colegiodante.org.br,mizzouacademy.missouri.edu,gserviceaccount.com"
+      },
+      "ArcBackupRestoreServiceEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": 0
+      },
+      "ArcEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": true
+      },
+      "ArcGoogleLocationServicesEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": 0
+      },
+      "ArcPolicy": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": "{\"applications\":[{\"packageName\":\"com.cisco.webex.meetings\",\"installType\":\"AVAILABLE\"}],\"playStoreMode\":\"WHITELIST_NOT_ENFORCED\",\"playEmmApiInstallDisabled\":true,\"statusReportingSettings\":{\"applicationReportsEnabled\":true,\"profileSettingsEnabled\":true,\"softwareInfoEnabled\":true}}"
+      },
+      "AssistantOnboardingMode": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": "Education"
+      },
+      "AttestationEnabledForDevice": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "AttestationEnabledForUser": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": true
+      },
+      "AttestationExtensionAllowlist": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": [ "clegecdcjeogcjnckoeiekhfbgiajbni" ]
+      },
+      "AttestationForContentProtectionEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "AudioCaptureAllowedUrls": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": [ "*.webex.com" ]
+      },
+      "AutoclickEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "CaptivePortalAuthenticationIgnoresProxy": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "CaretHighlightEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "CastReceiverEnabled": {
+         "future": true,
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "ChromeOsLockOnIdleSuspend": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": true
+      },
+      "ChromeOsMultiProfileUserBehavior": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": "primary-only"
+      },
+      "ChromeOsReleaseChannel": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": "stable-channel"
+      },
+      "ChromeOsReleaseChannelDelegated": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "CloudExtensionRequestEnabled": {
+         "error": "Ignorada porque a política CloudReportingEnabled não está definida como Enabled.",
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": true
+      },
+      "CookiesAllowedForUrls": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": [ "[*.]qmagico.com.br", "[*.]lenovosoftware.com" ]
+      },
+      "CopyPreventionSettings": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": {
+            "disable": [  ],
+            "enable": [  ],
+            "minimum_data_size": 0
+         }
+      },
+      "CursorHighlightEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "DefaultGeolocationSetting": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": 1
+      },
+      "DeveloperToolsAvailability": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": 2
+      },
+      "DeviceActivityHeartbeatEnabled": {
+         "future": true,
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceAllowNewUsers": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceAutoUpdateDisabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceAutoUpdateTimeRestrictions": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": [  ]
+      },
+      "DeviceBlockDevmode": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "DeviceChromeVariations": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": 0
+      },
+      "DeviceDataRoamingEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "DeviceDebugPacketCaptureAllowed": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceEphemeralUsersEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceGuestModeEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceLocalAccounts": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": [  ]
+      },
+      "DeviceLoginScreenAccessibilityShortcutsEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceLoginScreenAutoclickEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceLoginScreenCaretHighlightEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceLoginScreenCursorHighlightEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceLoginScreenDefaultHighContrastEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceLoginScreenDefaultLargeCursorEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceLoginScreenDefaultScreenMagnifierType": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": 0
+      },
+      "DeviceLoginScreenDefaultSpokenFeedbackEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceLoginScreenDictationEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceLoginScreenDomainAutoComplete": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": "colegiodante.org.br"
+      },
+      "DeviceLoginScreenHighContrastEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceLoginScreenInputMethods": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": [ "xkb:br::por", "xkb:us::eng" ]
+      },
+      "DeviceLoginScreenKeyboardFocusHighlightEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceLoginScreenLargeCursorEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceLoginScreenLocales": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": [ "pt-BR" ]
+      },
+      "DeviceLoginScreenMonoAudioEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceLoginScreenScreenMagnifierType": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": 0
+      },
+      "DeviceLoginScreenSelectToSpeakEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceLoginScreenSpokenFeedbackEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceLoginScreenStickyKeysEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceLoginScreenVirtualKeyboardEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceMetricsReportingEnabled": {
+         "info": "Essa política não pode ser definida como \"Verdadeira\" e ser obrigatória, então agora ela é recomendada.",
+         "level": "recommended",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "DeviceOpenNetworkConfiguration": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": "{\n   \"Certificates\": [ {\n      \"GUID\": \"{43c57da7-d137-4787-bece-0b7304e43d0b}\",\n      \"Type\": \"Authority\",\n      \"X509\": \"-----BEGIN CERTIFICATE-----\\nMIIDrzCCApegAwIBAgIQCDvgVpBCRrGhdWrJWZHHSjANBgkqhkiG9w0BAQUFADBh\\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\\nd3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBD\\nQTAeFw0wNjExMTAwMDAwMDBaFw0zMTExMTAwMDAwMDBaMGExCzAJBgNVBAYTAlVT\\nMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j\\nb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IENBMIIBIjANBgkqhkiG\\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4jvhEXLeqKTTo1eqUKKPC3eQyaKl7hLOllsB\\nCSDMAZOnTjC3U/dDxGkAV53ijSLdhwZAAIEJzs4bg7/fzTtxRuLWZscFs3YnFo97\\nnh6Vfe63SKMI2tavegw5BmV/Sl0fvBf4q77uKNd0f3p4mVmFaG5cIzJLv07A6Fpt\\n43C/dxC//AH2hdmoRBBYMql1GNXRor5H4idq9Joz+EkIYIvUX7Q6hL+hqkpMfT7P\\nT19sdl6gSzeRntwi5m3OFBqOasv+zbMUZBfHWymeMr/y7vrTC0LUq7dBMtoM1O/4\\ngdW7jVg/tRvoSSiicNoxBN33shbyTApOB6jtSj1etX+jkMOvJwIDAQABo2MwYTAO\\nBgNVHQ8BAf8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUA95QNVbR\\nTLtm8KPiGxvDl7I90VUwHwYDVR0jBBgwFoAUA95QNVbRTLtm8KPiGxvDl7I90VUw\\nDQYJKoZIhvcNAQEFBQADggEBAMucN6pIExIK+t1EnE9SsPTfrgT1eXkIoyQY/Esr\\nhMAtudXH/vTBH1jLuG2cenTnmCmrEbXjcKChzUyImZOMkXDiqw8cvpOp/2PV5Adg\\n06O/nVsJ8dWO41P0jmP6P6fbtGbfYmbW0W5BjfIttep3Sp+dWOIrWcBAI+0tKIJF\\nPnlUkiaY4IBIqDfv8NZ5YBberOgOzW6sRBc4L0na4UU+Krk2U886UAb3LujEV0ls\\nYSEY1QSteDwsOoBrp+uvFRTp2InBuThs4pFsiv9kuXclVzDAGySj4dzp30d8tbQk\\nCAUw7C29C79Fv1C5qfPrmAESrciIxpg0X40KPMbp1ZWVbd4=\\n-----END CERTIFICATE-----\"\n   } ],\n   \"GlobalNetworkConfiguration\": {\n      \"AllowOnlyPolicyCellularNetworks\": true,\n      \"AllowOnlyPolicyNetworksToAutoconnect\": false,\n      \"AllowOnlyPolicyNetworksToConnect\": false,\n      \"AllowOnlyPolicyNetworksToConnectIfAvailable\": true,\n      \"BlockedHexSSIDs\": [ \"4344412D57696669\" ],\n      \"DisableNetworkTypes\": [ \"Cellular\" ]\n   },\n   \"NetworkConfigurations\": [ {\n      \"GUID\": \"CDA-TABLETS(nova)-Wifi\",\n      \"Name\": \"CDA-TABLETS(nova)\",\n      \"ProxySettings\": {\n         \"Type\": \"Direct\"\n      },\n      \"StaticIPConfig\": {\n      },\n      \"Type\": \"WiFi\",\n      \"WiFi\": {\n         \"AutoConnect\": true,\n         \"HiddenSSID\": false,\n         \"Passphrase\": \"********\",\n         \"SSID\": \"CDA-TABLETS\",\n         \"Security\": \"WPA-PSK\"\n      }\n   }, {\n      \"GUID\": \"CDA-TABLETS-S-Wifi\",\n      \"Name\": \"CDA-TABLETS-S\",\n      \"ProxySettings\": {\n         \"Type\": \"Direct\"\n      },\n      \"StaticIPConfig\": {\n      },\n      \"Type\": \"WiFi\",\n      \"WiFi\": {\n         \"AutoConnect\": true,\n         \"EAP\": {\n            \"ClientCertPattern\": {\n               \"EnrollmentURI\": [ \"chrome-extension://\", \"clegecdcjeogcjnckoeiekhfbgiajbni/html/request_certificate.html\" ],\n               \"Issuer\": {\n                  \"CommonName\": \"Colegio Dante Alighieri Managed Device Intermediate CA\"\n               },\n               \"Subject\": {\n               }\n            },\n            \"ClientCertType\": \"Pattern\",\n            \"Identity\": \"${CERT_SAN_EMAIL}\",\n            \"Outer\": \"EAP-TLS\",\n            \"Recommended\": [ \"AnonymousIdentity\", \"Password\" ],\n            \"ServerCARef\": \"{43c57da7-d137-4787-bece-0b7304e43d0b}\",\n            \"TLSVersionMax\": \"1.2\",\n            \"UseSystemCAs\": false\n         },\n         \"HiddenSSID\": false,\n         \"SSID\": \"CDA-TABLETS-S\",\n         \"Security\": \"WPA-EAP\"\n      }\n   } ]\n}\n"
+      },
+      "DevicePowerAdaptiveChargingEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "DeviceRebootOnUserSignout": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": 3
+      },
+      "DeviceRollbackAllowedMilestones": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": 0
+      },
+      "DeviceShowUserNamesOnSignin": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceSystemWideTracingEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "DeviceTargetVersionPrefix": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": ""
+      },
+      "DeviceUnaffiliatedCrostiniAllowed": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "DeviceUpdateAllowedConnectionTypes": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": [ "wifi", "ethernet", "cellular" ]
+      },
+      "DeviceUpdateHttpDownloadsEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "DeviceUserAllowlist": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": "********"
+      },
+      "DeviceWiFiFastTransitionEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "DictationEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "DisableSafeBrowsingProceedAnyway": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": true
+      },
+      "DnsOverHttpsMode": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": "off"
+      },
+      "DownloadDirectory": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": "${google_drive}/"
+      },
+      "DownloadRestrictions": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": 1
+      },
+      "DriveDisabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "EasyUnlockAllowed": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "EmojiSuggestionEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "EnableSyncConsent": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "ExtensionAllowedTypes": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": [ "extension", "theme", "hosted_app", "legacy_packaged_app", "platform_app" ]
+      },
+      "ExtensionInstallAllowlist": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": [ "clegecdcjeogcjnckoeiekhfbgiajbni", "kegmpkjemolodhbnlpadkkdbhplebapg", "keknjhjnninjadlkapachhhjfmfnofcb", "elmgohdonjdampbcgefphnlchgocpaij", "ghbmnnjooekpmoecnnnilnnbdlolhkhi", "hmbjbjdpkobdjplfobhljndfdfdipjhg", "ifbdadgbpalmagalacllfaflfakmfkac", "iimbdmgkimpbhimdjnmiffmeefbppijo", "inomeogfingihgjfjlpeplalcfajhgai", "jlhmfgmfgeifomenelglieieghnjghma", "kcljbbiddpoeaknnjaminoceoojdbikp" ]
+      },
+      "ExtensionInstallBlocklist": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": [ "*" ]
+      },
+      "ExtensionInstallForcelist": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": [ "clegecdcjeogcjnckoeiekhfbgiajbni;https://clients2.google.com/service/update2/crx", "kegmpkjemolodhbnlpadkkdbhplebapg;https://api-lsa.lenovosoftware.com/0/lsa/lanschool/clientInstaller/chrome/auto-update.xml", "keknjhjnninjadlkapachhhjfmfnofcb;https://api-lsa.lenovosoftware.com/0/lsa/lanschool/extensionInstaller/chrome/auto-update.xml", "elmgohdonjdampbcgefphnlchgocpaij;https://clients2.google.com/service/update2/crx", "ghbmnnjooekpmoecnnnilnnbdlolhkhi;https://clients2.google.com/service/update2/crx", "iimbdmgkimpbhimdjnmiffmeefbppijo;https://clients2.google.com/service/update2/crx", "inomeogfingihgjfjlpeplalcfajhgai;https://clients2.google.com/service/update2/crx", "jlhmfgmfgeifomenelglieieghnjghma;https://clients2.google.com/service/update2/crx", "gmbmikajjgmnabiglmofipeabaddhgne;https://clients2.google.com/service/update2/crx", "mfhehppjhmmnlfbbopchdfldgimhfhfk;https://clients2.google.com/service/update2/crx" ]
+      },
+      "ExtensionSettings": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": {
+            "*": {
+               "blocked_permissions": [ "vpnProvider", "webRequest" ]
+            },
+            "kegmpkjemolodhbnlpadkkdbhplebapg": {
+               "blocked_permissions": [  ]
+            },
+            "keknjhjnninjadlkapachhhjfmfnofcb": {
+               "blocked_permissions": [  ]
+            },
+            "mfhehppjhmmnlfbbopchdfldgimhfhfk": {
+               "toolbar_pin": "force_pinned"
+            }
+         }
+      },
+      "FastPairEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "ForceGoogleSafeSearch": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": true
+      },
+      "ForceYouTubeRestrict": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": 1
+      },
+      "HeartbeatEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "HideWebStoreIcon": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": true
+      },
+      "HighContrastEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "IncognitoModeAvailability": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": 1
+      },
+      "InstantTetheringAllowed": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "IsolatedAppsDeveloperModeAllowed": {
+         "future": true,
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "KeyboardFocusHighlightEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "KioskCRXManifestUpdateURLIgnored": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "LacrosAvailability": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": "lacros_disallowed"
+      },
+      "LacrosSecondaryProfilesAllowed": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "LacrosSelection": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": "rootfs"
+      },
+      "LargeCursorEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "LidCloseAction": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": 0
+      },
+      "LogUploadEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "LoginDisplayPasswordButtonEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "LoginVideoCaptureAllowedUrls": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": [  ]
+      },
+      "MonoAudioEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "NTLMShareAuthenticationEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "NTPCustomBackgroundEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "NearbyShareAllowed": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "NetBiosShareDiscoveryEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "NetworkThrottlingEnabled": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": {
+            "download_rate_kbits": 0,
+            "enabled": false,
+            "upload_rate_kbits": 0
+         }
+      },
+      "OpenNetworkConfiguration": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": "{\n   \"Certificates\": [ {\n      \"GUID\": \"{033fa6de-79ba-47db-91b3-9041a7395757}\",\n      \"Type\": \"Authority\",\n      \"X509\": \"-----BEGIN CERTIFICATE-----\\nMIIDrzCCApegAwIBAgIQCDvgVpBCRrGhdWrJWZHHSjANBgkqhkiG9w0BAQUFADBh\\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\\nd3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBD\\nQTAeFw0wNjExMTAwMDAwMDBaFw0zMTExMTAwMDAwMDBaMGExCzAJBgNVBAYTAlVT\\nMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j\\nb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IENBMIIBIjANBgkqhkiG\\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4jvhEXLeqKTTo1eqUKKPC3eQyaKl7hLOllsB\\nCSDMAZOnTjC3U/dDxGkAV53ijSLdhwZAAIEJzs4bg7/fzTtxRuLWZscFs3YnFo97\\nnh6Vfe63SKMI2tavegw5BmV/Sl0fvBf4q77uKNd0f3p4mVmFaG5cIzJLv07A6Fpt\\n43C/dxC//AH2hdmoRBBYMql1GNXRor5H4idq9Joz+EkIYIvUX7Q6hL+hqkpMfT7P\\nT19sdl6gSzeRntwi5m3OFBqOasv+zbMUZBfHWymeMr/y7vrTC0LUq7dBMtoM1O/4\\ngdW7jVg/tRvoSSiicNoxBN33shbyTApOB6jtSj1etX+jkMOvJwIDAQABo2MwYTAO\\nBgNVHQ8BAf8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUA95QNVbR\\nTLtm8KPiGxvDl7I90VUwHwYDVR0jBBgwFoAUA95QNVbRTLtm8KPiGxvDl7I90VUw\\nDQYJKoZIhvcNAQEFBQADggEBAMucN6pIExIK+t1EnE9SsPTfrgT1eXkIoyQY/Esr\\nhMAtudXH/vTBH1jLuG2cenTnmCmrEbXjcKChzUyImZOMkXDiqw8cvpOp/2PV5Adg\\n06O/nVsJ8dWO41P0jmP6P6fbtGbfYmbW0W5BjfIttep3Sp+dWOIrWcBAI+0tKIJF\\nPnlUkiaY4IBIqDfv8NZ5YBberOgOzW6sRBc4L0na4UU+Krk2U886UAb3LujEV0ls\\nYSEY1QSteDwsOoBrp+uvFRTp2InBuThs4pFsiv9kuXclVzDAGySj4dzp30d8tbQk\\nCAUw7C29C79Fv1C5qfPrmAESrciIxpg0X40KPMbp1ZWVbd4=\\n-----END CERTIFICATE-----\"\n   }, {\n      \"GUID\": \"{b1d15f56-f82c-43df-ae3a-d97e49b65329}\",\n      \"Type\": \"Authority\",\n      \"X509\": \"-----BEGIN CERTIFICATE-----\\nMIIDrzCCApegAwIBAgIQCDvgVpBCRrGhdWrJWZHHSjANBgkqhkiG9w0BAQUFADBh\\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\\nd3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBD\\nQTAeFw0wNjExMTAwMDAwMDBaFw0zMTExMTAwMDAwMDBaMGExCzAJBgNVBAYTAlVT\\nMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j\\nb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IENBMIIBIjANBgkqhkiG\\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4jvhEXLeqKTTo1eqUKKPC3eQyaKl7hLOllsB\\nCSDMAZOnTjC3U/dDxGkAV53ijSLdhwZAAIEJzs4bg7/fzTtxRuLWZscFs3YnFo97\\nnh6Vfe63SKMI2tavegw5BmV/Sl0fvBf4q77uKNd0f3p4mVmFaG5cIzJLv07A6Fpt\\n43C/dxC//AH2hdmoRBBYMql1GNXRor5H4idq9Joz+EkIYIvUX7Q6hL+hqkpMfT7P\\nT19sdl6gSzeRntwi5m3OFBqOasv+zbMUZBfHWymeMr/y7vrTC0LUq7dBMtoM1O/4\\ngdW7jVg/tRvoSSiicNoxBN33shbyTApOB6jtSj1etX+jkMOvJwIDAQABo2MwYTAO\\nBgNVHQ8BAf8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUA95QNVbR\\nTLtm8KPiGxvDl7I90VUwHwYDVR0jBBgwFoAUA95QNVbRTLtm8KPiGxvDl7I90VUw\\nDQYJKoZIhvcNAQEFBQADggEBAMucN6pIExIK+t1EnE9SsPTfrgT1eXkIoyQY/Esr\\nhMAtudXH/vTBH1jLuG2cenTnmCmrEbXjcKChzUyImZOMkXDiqw8cvpOp/2PV5Adg\\n06O/nVsJ8dWO41P0jmP6P6fbtGbfYmbW0W5BjfIttep3Sp+dWOIrWcBAI+0tKIJF\\nPnlUkiaY4IBIqDfv8NZ5YBberOgOzW6sRBc4L0na4UU+Krk2U886UAb3LujEV0ls\\nYSEY1QSteDwsOoBrp+uvFRTp2InBuThs4pFsiv9kuXclVzDAGySj4dzp30d8tbQk\\nCAUw7C29C79Fv1C5qfPrmAESrciIxpg0X40KPMbp1ZWVbd4=\\n-----END CERTIFICATE-----\"\n   }, {\n      \"GUID\": \"{43c57da7-d137-4787-bece-0b7304e43d0b}\",\n      \"Type\": \"Authority\",\n      \"X509\": \"-----BEGIN CERTIFICATE-----\\nMIIDrzCCApegAwIBAgIQCDvgVpBCRrGhdWrJWZHHSjANBgkqhkiG9w0BAQUFADBh\\nMQswCQYDVQQGEwJVUzEVMBMGA1UEChMMRGlnaUNlcnQgSW5jMRkwFwYDVQQLExB3\\nd3cuZGlnaWNlcnQuY29tMSAwHgYDVQQDExdEaWdpQ2VydCBHbG9iYWwgUm9vdCBD\\nQTAeFw0wNjExMTAwMDAwMDBaFw0zMTExMTAwMDAwMDBaMGExCzAJBgNVBAYTAlVT\\nMRUwEwYDVQQKEwxEaWdpQ2VydCBJbmMxGTAXBgNVBAsTEHd3dy5kaWdpY2VydC5j\\nb20xIDAeBgNVBAMTF0RpZ2lDZXJ0IEdsb2JhbCBSb290IENBMIIBIjANBgkqhkiG\\n9w0BAQEFAAOCAQ8AMIIBCgKCAQEA4jvhEXLeqKTTo1eqUKKPC3eQyaKl7hLOllsB\\nCSDMAZOnTjC3U/dDxGkAV53ijSLdhwZAAIEJzs4bg7/fzTtxRuLWZscFs3YnFo97\\nnh6Vfe63SKMI2tavegw5BmV/Sl0fvBf4q77uKNd0f3p4mVmFaG5cIzJLv07A6Fpt\\n43C/dxC//AH2hdmoRBBYMql1GNXRor5H4idq9Joz+EkIYIvUX7Q6hL+hqkpMfT7P\\nT19sdl6gSzeRntwi5m3OFBqOasv+zbMUZBfHWymeMr/y7vrTC0LUq7dBMtoM1O/4\\ngdW7jVg/tRvoSSiicNoxBN33shbyTApOB6jtSj1etX+jkMOvJwIDAQABo2MwYTAO\\nBgNVHQ8BAf8EBAMCAYYwDwYDVR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQUA95QNVbR\\nTLtm8KPiGxvDl7I90VUwHwYDVR0jBBgwFoAUA95QNVbRTLtm8KPiGxvDl7I90VUw\\nDQYJKoZIhvcNAQEFBQADggEBAMucN6pIExIK+t1EnE9SsPTfrgT1eXkIoyQY/Esr\\nhMAtudXH/vTBH1jLuG2cenTnmCmrEbXjcKChzUyImZOMkXDiqw8cvpOp/2PV5Adg\\n06O/nVsJ8dWO41P0jmP6P6fbtGbfYmbW0W5BjfIttep3Sp+dWOIrWcBAI+0tKIJF\\nPnlUkiaY4IBIqDfv8NZ5YBberOgOzW6sRBc4L0na4UU+Krk2U886UAb3LujEV0ls\\nYSEY1QSteDwsOoBrp+uvFRTp2InBuThs4pFsiv9kuXclVzDAGySj4dzp30d8tbQk\\nCAUw7C29C79Fv1C5qfPrmAESrciIxpg0X40KPMbp1ZWVbd4=\\n-----END CERTIFICATE-----\"\n   } ]\n}\n"
+      },
+      "OsColorMode": {
+         "level": "recommended",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": "light"
+      },
+      "PhoneHubAllowed": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "PinUnlockAutosubmitEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "PinnedLauncherApps": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": [ "canvas", "cursive", "projector", "mfhehppjhmmnlfbbopchdfldgimhfhfk" ]
+      },
+      "PluginVmAllowed": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "PopupsAllowedForUrls": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": [ "[*.]qmagico.com.br" ]
+      },
+      "PowerManagementIdleSettings": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": {
+            "AC": {
+               "Delays": {
+                  "Idle": 7200000,
+                  "IdleWarning": 6900000,
+                  "ScreenDim": 0,
+                  "ScreenOff": 0
+               },
+               "IdleAction": "Logout"
+            },
+            "Battery": {
+               "Delays": {
+                  "Idle": 7200000,
+                  "IdleWarning": 6900000,
+                  "ScreenDim": 0,
+                  "ScreenOff": 0
+               },
+               "IdleAction": "Logout"
+            }
+         }
+      },
+      "PresentationScreenDimDelayScale": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": 100
+      },
+      "ProxyMode": {
+         "deprecated": true,
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": "direct"
+      },
+      "QuickUnlockModeAllowlist": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": [  ]
+      },
+      "RebootAfterUpdate": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "RecoveryFactorBehavior": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "ReportArcStatusEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": true
+      },
+      "ReportCRDSessions": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "ReportDeviceActivityTimes": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "ReportDeviceAudioStatus": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "ReportDeviceAudioStatusCheckingRateMs": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": 900000
+      },
+      "ReportDeviceBacklightInfo": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "ReportDeviceBluetoothInfo": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "ReportDeviceBoardStatus": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "ReportDeviceBootMode": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "ReportDeviceCpuInfo": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "ReportDeviceCrashReportInfo": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "ReportDeviceFanInfo": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "ReportDeviceGraphicsStatus": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "ReportDeviceLoginLogout": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "ReportDeviceMemoryInfo": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "ReportDeviceNetworkConfiguration": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "ReportDeviceNetworkStatus": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "ReportDeviceOsUpdateStatus": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "ReportDevicePeripherals": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "ReportDevicePowerStatus": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "ReportDevicePrintJobs": {
+         "future": true,
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "ReportDeviceSecurityStatus": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "ReportDeviceSessionStatus": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "ReportDeviceStorageStatus": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "ReportDeviceSystemInfo": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "ReportDeviceTimezoneInfo": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "ReportDeviceUsers": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "ReportDeviceVersionInfo": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": true
+      },
+      "ReportDeviceVpdInfo": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": false
+      },
+      "ReportUploadFrequency": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": 3600000
+      },
+      "SAMLOfflineSigninTimeLimit": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": 1209600
+      },
+      "SSLErrorOverrideAllowed": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "SSLVersionMin": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": "tls1"
+      },
+      "SafeBrowsingProtectionLevel": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": 1
+      },
+      "SafeSitesFilterBehavior": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": 1
+      },
+      "ScreenMagnifierType": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": 0
+      },
+      "SecondaryGoogleAccountSigninAllowed": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": true
+      },
+      "SelectToSpeakEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "ShowAccessibilityOptionsInSystemTrayMenu": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "ShowCastSessionsStartedByOtherDevices": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "ShowFullUrlsInAddressBar": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "ShowLogoutButtonInTray": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": true
+      },
+      "ShowTouchpadScrollScreenEnabled": {
+         "future": true,
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "SmartLockSigninAllowed": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "SmsMessagesAllowed": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "SpellCheckServiceEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": true
+      },
+      "SpokenFeedbackEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "StickyKeysEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "SuggestedContentEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "SystemTerminalSshAllowed": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "SystemTimezone": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": "America/Sao_Paulo"
+      },
+      "SystemTimezoneAutomaticDetection": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": 2
+      },
+      "TPMFirmwareUpdateSettings": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": {
+         }
+      },
+      "TaskManagerEndProcessEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "TranslateEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "URLBlocklist": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": [ "http://www.clickjogos.com.br/", "https://discord.com/", "https://web.whatsapp.com/", "https://slopegame.online/", "https://justfall.lol/", "https://topspeed.com/", "https://openai.com", "https://writesonic.com", "https://sites.google.com/view/games-unblockedd/" ]
+      },
+      "UsbDetachableAllowlist": {
+         "level": "mandatory",
+         "scope": "machine",
+         "source": "cloud",
+         "value": [  ]
+      },
+      "UserActivityScreenDimDelayScale": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": 100
+      },
+      "UserBorealisAllowed": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      },
+      "VideoCaptureAllowedUrls": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": [ "*.webex.com" ]
+      },
+      "VirtualKeyboardEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "VoiceInteractionHotwordEnabled": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": false
+      },
+      "WallpaperImage": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": {
+            "hash": "4c5221f74e870c0475a09f52c68da011a222d047c56cbe2cde78fd5a613d3004",
+            "url": "https://storage.googleapis.com/chromeos-mgmt/0gjdgxs4a0ijmf/ChromeOsWallpaper/e685e947-8af6-4bc7-9cf3-187ebab37a8c"
+         }
+      },
+      "WebAppInstallForceList": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "cloud",
+         "value": [ {
+            "uninstall_and_replace": [ "apdfllckaahabafndbhieahigkjlhalf" ],
+            "url": "https://drive.google.com/drive/installwebapp?usp=chrome_default"
+         } ]
+      },
+      "WifiSyncAndroidAllowed": {
+         "level": "mandatory",
+         "scope": "user",
+         "source": "sourceEnterpriseDefault",
+         "value": false
+      }
+   },
+   "deviceLocalAccountPolicies": {
+   },
+   "extensionPolicies": {
+      "clegecdcjeogcjnckoeiekhfbgiajbni": {
+         "DeviceCertificate": {
+            "level": "mandatory",
+            "scope": "user",
+            "source": "cloud",
+            "value": true
+         },
+         "EnrollmentURL": {
+            "level": "mandatory",
+            "scope": "user",
+            "source": "cloud",
+            "value": "https://pki-services.securew2.com/enroll/5ccd87b2-67ff-4bc2-92cd-7438651fa28b"
+         },
+         "MetaConfigInfo": {
+            "level": "mandatory",
+            "scope": "user",
+            "source": "cloud",
+            "value": {
+               "organizationId": "91273",
+               "profileId": "9211CB06-4DFD-4D31-B425-8E03737E4A32"
+            }
+         },
+         "RenewWindowDays": {
+            "level": "mandatory",
+            "scope": "user",
+            "source": "cloud",
+            "value": 30
+         }
+      },
+      "ghbmnnjooekpmoecnnnilnnbdlolhkhi": {
+      },
+      "kegmpkjemolodhbnlpadkkdbhplebapg": {
+      }
+   },
+   "loginScreenExtensionPolicies": {
+   },
+   "status": {
+      "device": {
+         "assetId": "1022936",
+         "clientId": "e1b28344-7434-4de6-a53e-6f1c47f47462",
+         "directoryApiId": "edf0aa5b-a608-4e50-9b77-9db359c700a2",
+         "enterpriseDomainManager": "colegiodante.org.br",
+         "error": false,
+         "gaiaId": "105250506097979753968",
+         "isOffHoursActive": false,
+         "location": "",
+         "policiesPushAvailable": true,
+         "policyDescriptionKey": "statusDevice",
+         "status": "Cache da política OK",
+         "timeSinceLastFetchAttempt": "7 horas atrás",
+         "timeSinceLastRefresh": "7 horas atrás",
+         "username": "addgsuite@colegiodante.org.br"
+      },
+      "user": {
+         "clientId": "332b3b7f-d700-4ec8-85e5-0c2f27a86de1",
+         "domain": "colegiodante.org.br",
+         "enterpriseDomainManager": "colegiodante.org.br",
+         "error": false,
+         "flexOrgWarning": false,
+         "gaiaId": "113220155622650057249",
+         "isAffiliated": true,
+         "policiesPushAvailable": true,
+         "policyDescriptionKey": "statusUser",
+         "profileId": "otFqmMMSCe9qYAyPwP6Mb-hx7z0",
+         "status": "Cache da política OK",
+         "timeSinceLastFetchAttempt": "7 horas atrás",
+         "timeSinceLastRefresh": "7 horas atrás",
+         "username": "felipe.lorentz@colegiodante.org.br"
+      }
+   }
+}

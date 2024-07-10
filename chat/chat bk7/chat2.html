@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!--desc-->
+    <meta name="description" content="Home Dante Chat">
+    <!---->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--name & ico-->
+    <link id="page-ico" rel="icon" type="image/x-icon" href="img/chat.ico">
+    <title>CDA Chat</title>
+    <!--my css-->
+    <link rel="stylesheet" href="page.css">
+    <script src="scripts/msg.js"></script>
+</head>
+<body translate="no">
+    <a id='nadaAberto'>nada aberto</a>
+    <!--nav-->
+    <nav id="salvos">
+        <div id="menu">
+            <textarea id='pesquisar' placeholder="pesquisar" tabindex="0"></textarea>
+            <span class="material-symbols-outlined" id="add" onclick="createNew()">add</span>
+            <div id="homeSettings">
+                <span class="material-symbols-outlined" tabindex="0" id='settings' onclick="openSettings()">settings</span>
+                <span class="material-symbols-outlined" tabindex="0" id="home" href="https://homedante.colegiodante.com.br/">home</span>
+            </div>
+        </div>
+        <div id="contatos"></div>
+    </nav>
+    <!--New Group Menu-->
+    <div class="createNewMenu" style="display: none;">
+        <h2 class='newGroupCreatorTitle'>Novo Grupo</h2>
+        <span class="material-symbols-outlined exitCreateGroupMenu" tabindex="0">close</span>
+    </div>
+    <!--settings-->
+    <div id='settingsMenu'>
+        <span id='closeSettings' class="material-symbols-outlined" tabindex="0">close</span>
+        <a href="manuel.html">manuel</a>
+    </div>
+    <script src="page1.js" type="module"></script>
+</body>
+</html>

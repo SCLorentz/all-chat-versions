@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <style>
+        html {
+            height: 100%;
+        }
+        :root {
+            --font-color:white;
+            --transparent_background:#0000003d;
+            --darkbackground:#363636;
+            --background:dimgray;
+            --lightbackground:#919191;
+        }
+        body {
+            background-image: url(https://i.pinimg.com/originals/fa/c0/5c/fac05c110c458e9bab3a3248bfb3c376.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color: #0d0423;
+            display: grid;
+            place-items: center;
+            height: 100%;
+            overflow: hidden;
+        }
+        #checkbox {
+            margin: 0px;
+            display: flex;
+        }
+        #checkbox:hover {
+            cursor: pointer;
+        }
+        .material-symbols-outlined {
+            user-select: none;
+        }
+        #eye {
+            color: #ad1212;
+            transition: all 0.5s ease;
+        }
+
+        :focus-visible {
+            outline: 0px;
+        } 
+
+        .login {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            background-color: #0000007a;
+            backdrop-filter: blur(5px);
+            height: fit-content;
+            border-radius: 0.5rem;
+            padding: 15px;
+            color: var(--font-color);
+            font-family: comfortaa;
+            user-select: none;
+        }
+
+        #password {
+            border: 0px;
+            border-radius: inherit;
+            background-color: transparent;
+        }
+        #username {
+            border: 0px;
+            border-radius: inherit;
+            background-color: transparent;
+        }
+
+        .input {
+            border-radius: 0.3rem;
+            background-color: white;
+            display: inherit;
+            align-items: inherit;
+            padding: 5px;
+            width: 100%;
+            color: black;
+            margin-bottom:10px;
+            transition: all 0.5s ease;
+            height: 25px;
+        }
+
+        #login-btn {
+            display:grid;
+            justify-content: center;
+            background-color: #ad1212;
+            color:var(--font-color);
+        }
+        #login-btn:hover {
+            cursor: pointer;
+            box-shadow: inset 100px 100px 100px 100px #0000004a;
+        }
+
+        .entrar {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            background-color: black;
+            padding: 5px;
+            border-radius: 0.2rem;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h1 style="cursor:default;display: flex;"><span class="material-symbols-outlined" style="font-size: 1em;">lock</span>Login:</h1>
+        <div class="input">
+            <input type="text" id="username" placeholder="name">
+        </div>
+        <div class="input">
+            <input type="password" id="password" placeholder="password">
+            <p id="checkbox" onclick="show()"><span id="eye" class="material-symbols-outlined">visibility_off</span></p>
+        </div>
+            <div id="login-btn" class="input">login</div>
+            <div style="width:100%;border-bottom:2px solid var(--font-color);margin-bottom:10px;"></div>
+        <div class="entrar">
+            <div style="
+            background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/2048px-Google_%22G%22_Logo.svg.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 20px;
+            width: 20px;
+            margin:2px;
+            ">
+            </div>
+            google
+        </div>
+        <p style="font-size: small;cursor: pointer;margin-bottom: 0px;">forgot password?</p>
+    </div>
+    <script>
+        function show() {
+            var x = document.getElementById("password");
+            var y = document.getElementById("eye");
+            if (x.type === "password") {
+                x.type = "text";
+                y.innerHTML = "visibility"
+                y.style.color = "black";
+            } else {
+                x.type = "password";
+                y.innerHTML = "visibility_off"
+                y.style.color = "#ad1212";
+            }
+        }
+    </script>
+</body>
+</html>
